@@ -15,6 +15,7 @@ Default admin credentials:
 Change CAG_ADMIN_USERNAME and CAG_ADMIN_PASSWORD before going live.
 """
 
+import hashlib
 import json
 import os
 import secrets
@@ -191,12 +192,26 @@ def build_schema_json(content: dict, base_url: str) -> str:
     return json.dumps(payload, indent=2, ensure_ascii=False)
 
 
+def build_asset_version() -> str:
+    """Return a short content hash so browsers cannot reuse stale site assets."""
+    digest = hashlib.sha256()
+    asset_paths = [BASE_DIR / "css" / "style.css", BASE_DIR / "js" / "main.js"]
+    asset_paths.extend(sorted((BASE_DIR / "images" / "products").glob("*.webp")))
+
+    for path in asset_paths:
+        digest.update(path.relative_to(BASE_DIR).as_posix().encode("utf-8"))
+        digest.update(path.read_bytes())
+
+    return digest.hexdigest()[:12]
+
+
 def render_site(content: dict, base_url: str, current_year: int | None = None) -> str:
     """Render the editable content into the complete public website."""
     return render_template(
         SITE_TEMPLATE,
         content=content,
         base_url=base_url,
+        asset_version=build_asset_version(),
         schema_json=build_schema_json(content, base_url),
         current_year=current_year or datetime.now().year,
     )

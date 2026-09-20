@@ -4,6 +4,26 @@
 
 'use strict';
 
+// ── Prevent Unwanted Scroll Restoration ─────────────────────
+// Browsers can restore the previous scroll position on reload. Combined with
+// smooth scrolling, that looks like the page is scrolling by itself.
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+function resetUnlinkedScrollPosition() {
+  if (window.location.hash) return;
+
+  const root = document.documentElement;
+  const previousBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, 0);
+  root.style.scrollBehavior = previousBehavior;
+}
+
+resetUnlinkedScrollPosition();
+window.addEventListener('pageshow', resetUnlinkedScrollPosition);
+
 // ── Nav Scroll Behavior ──────────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -15,10 +35,19 @@ const hamburger   = document.getElementById('hamburger');
 const mobileMenu  = document.getElementById('mobileMenu');
 const menuClose   = document.getElementById('menuClose');
 
-hamburger.addEventListener('click',  () => mobileMenu.classList.add('open'));
-menuClose.addEventListener('click',  () => mobileMenu.classList.remove('open'));
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+});
+menuClose.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+});
 mobileMenu.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  })
 );
 
 // ── Scroll Reveal ────────────────────────────────────────────
@@ -110,7 +139,13 @@ function showToast(msg) {
 // ── Smooth scroll for hero CTA ────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (!href || href === '#') {
+      e.preventDefault();
+      return;
+    }
+
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth' });
