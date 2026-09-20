@@ -535,7 +535,13 @@
         {% for service in content.spiritual.services %}
         <div class="spiritual-service-item">
           {{ spiritual_icon(service.icon_key) }}
-          <span>{{ service.label }}</span>
+          <div class="spiritual-service-copy">
+            <div class="spiritual-service-heading">
+              <span class="spiritual-service-label">{{ service.label }}</span>
+              <span class="spiritual-service-price">{{ service.price }}</span>
+            </div>
+            <p>{{ service.description }}</p>
+          </div>
         </div>
         {% endfor %}
       </div>

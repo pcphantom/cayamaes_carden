@@ -829,12 +829,36 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-shrink: 0;
   color: var(--gold);
 }
-.spiritual-service-item span {
+.spiritual-service-copy {
+  flex: 1;
+  min-width: 0;
+}
+.spiritual-service-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.spiritual-service-label,
+.spiritual-service-price {
   font-family: var(--font-ui);
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--parchment);
+}
+.spiritual-service-price {
+  flex-shrink: 0;
+  color: var(--gold-pale);
+  font-weight: 500;
+}
+.spiritual-service-copy p {
+  margin: 0.35rem 0 0;
+  color: rgba(237,229,208,0.62);
+  font-family: var(--font-ui);
+  font-size: 0.73rem;
+  letter-spacing: 0.02em;
+  line-height: 1.55;
 }
 
 .spiritual-contact-card {

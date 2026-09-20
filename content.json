@@ -317,6 +317,16 @@
         "price": "$26"
       },
       {
+        "badge": "Set of 3",
+        "category_id": "infused-oils",
+        "category_label": "Infused Botanical Oils",
+        "description": "Choose any three 1 oz oils, wrapped to give.",
+        "id": "any-three-oils",
+        "image_key": "oil_collection",
+        "name": "Any Three Oils",
+        "price": "$60"
+      },
+      {
         "badge": "Seasonal",
         "category_id": "infused-oils",
         "category_label": "Infused Botanical Oils",
@@ -434,6 +444,16 @@
         "image_key": "spiritual_blend",
         "name": "Custom Anointing Oil",
         "price": "$30"
+      },
+      {
+        "badge": "Made to Order",
+        "category_id": "spiritual",
+        "category_label": "Sacred Offerings",
+        "description": "Loose blends, sachets, and dressed candles made for your intention.",
+        "id": "ritual-intention-work",
+        "image_key": "spiritual_blend",
+        "name": "Ritual & Intention Work",
+        "price": "from $35"
       }
     ],
     "section_label": "The Apothecary"
@@ -511,24 +531,28 @@
     "section_label": "Sacred Offerings",
     "services": [
       {
+        "description": "30 or 60 minutes. In person, or by phone if you are further out.",
         "icon_key": "spark",
-        "label": "Intuitive Reading & Spiritual Guidance"
+        "label": "Intuitive Reading",
+        "price": "$65 / $110"
       },
       {
+        "description": "45 minutes. A formula built for you. The fee goes toward the order.",
         "icon_key": "clock",
-        "label": "Herbal Remedy Consultations"
+        "label": "Herbal Consultation",
+        "price": "$75"
       },
       {
-        "icon_key": "drop",
-        "label": "Custom Ritual & Intention Blends"
-      },
-      {
+        "description": "Homes, rooms, and new beginnings. Travel varies.",
         "icon_key": "heart",
-        "label": "Energy Clearing & Space Blessing"
+        "label": "Clearing & Blessing",
+        "price": "from $175"
       },
       {
+        "description": "Private or group. How plants are gathered, dried, and worked. Hands on.",
         "icon_key": "home",
-        "label": "Ancestral Plant Wisdom Teachings"
+        "label": "Plant Wisdom Teaching",
+        "price": "$120 / $65 pp"
       }
     ]
   },
