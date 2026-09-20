@@ -1,0 +1,447 @@
+{
+  "footer": {
+    "brand_blurb": "Handcrafted herbal products and spiritual wellness services rooted in ancient plant wisdom. Made with love in Sacramento, California.",
+    "contact_heading": "Contact",
+    "copyright_text": "Cayamae's Ancient Garden · All rights reserved · Handcrafted with love in Sacramento, CA",
+    "garden_heading": "Garden",
+    "garden_links": [
+      {
+        "href": "#philosophy",
+        "label": "Our Story"
+      },
+      {
+        "href": "#spiritual",
+        "label": "Spiritual Services"
+      },
+      {
+        "href": "#testimonials",
+        "label": "Community"
+      },
+      {
+        "href": "https://www.patreon.com/PLACEHOLDER_PATREON",
+        "label": "Support on Patreon",
+        "new_tab": true
+      }
+    ],
+    "shop_heading": "Shop",
+    "shop_links": [
+      {
+        "href": "#products",
+        "label": "All Products"
+      },
+      {
+        "filter_id": "infused-oils",
+        "href": "#products",
+        "label": "Infused Oils"
+      },
+      {
+        "filter_id": "lotions",
+        "href": "#products",
+        "label": "Lotions & Creams"
+      },
+      {
+        "filter_id": "soaps",
+        "href": "#products",
+        "label": "Soaps & Scrubs"
+      },
+      {
+        "filter_id": "spiritual",
+        "href": "#products",
+        "label": "Spiritual Blends"
+      }
+    ],
+    "social_links": [
+      {
+        "label": "Visit our Etsy shop",
+        "platform": "etsy",
+        "url": "#"
+      },
+      {
+        "label": "Support on Patreon",
+        "platform": "patreon",
+        "url": "https://www.patreon.com/PLACEHOLDER_PATREON"
+      },
+      {
+        "label": "Facebook",
+        "platform": "facebook",
+        "url": "#"
+      }
+    ]
+  },
+  "hero": {
+    "cta_primary_href": "#products",
+    "cta_primary_label": "Explore the Apothecary",
+    "cta_secondary_href": "#spiritual",
+    "cta_secondary_label": "Spiritual Services",
+    "eyebrow": "Rooted in Ancient Wisdom · Handcrafted with Love",
+    "scroll_label": "Discover",
+    "subtitle": "Where the Earth Heals & the Spirit Blooms",
+    "tagline": "Wild-harvested herbs. Small-batch remedies. Handcrafted with intention for your body, your home, and your soul.",
+    "title_emphasis": "Ancient Garden",
+    "title_line": "Cayamae's"
+  },
+  "nav": {
+    "links": [
+      {
+        "href": "#philosophy",
+        "label": "Our Story"
+      },
+      {
+        "href": "#products",
+        "label": "Shop"
+      },
+      {
+        "href": "#spiritual",
+        "label": "Spiritual Services"
+      },
+      {
+        "href": "#testimonials",
+        "label": "Community"
+      },
+      {
+        "href": "#footer",
+        "label": "Contact"
+      },
+      {
+        "href": "https://www.patreon.com/PLACEHOLDER_PATREON",
+        "label": "Support Her Work",
+        "new_tab": true,
+        "variant": "support"
+      }
+    ]
+  },
+  "philosophy": {
+    "headline_emphasis": "Uniqueness",
+    "headline_prefix": "Creating for Your",
+    "headline_suffix": "Each Day",
+    "paragraphs": [
+      "Cayamae's Ancient Garden was born from a deep reverence for the healing power of plants and a calling to share that wisdom. Every product is made by hand in small batches, drawing on traditional plant knowledge passed down through generations and refined through years of practice.",
+      "We believe your body deserves ingredients you can pronounce — wild-harvested herbs, cold-pressed oils, and botanicals gathered with care and intention. Nothing synthetic. Nothing mass-produced. Everything made just for you."
+    ],
+    "pillars": [
+      {
+        "description": "Botanicals gathered from nature, never factory-farmed",
+        "title": "Wild-Harvested"
+      },
+      {
+        "description": "Made with intention; every batch receives full attention",
+        "title": "Small Batch"
+      },
+      {
+        "description": "Rooted in traditional plant medicine and herbalism",
+        "title": "Ancient Wisdom"
+      },
+      {
+        "description": "Custom formulas — one size does not fit all",
+        "title": "For All Bodies"
+      }
+    ],
+    "quote_attribution": "Cayamae's Ancient Garden",
+    "quote_text": "One size does not fit all — our formulas are created to bring you closer to nature.",
+    "section_label": "Our Story & Philosophy"
+  },
+  "products": {
+    "closing_cta_href": "#footer",
+    "closing_cta_label": "Get in Touch to Order",
+    "closing_note": "All products are handmade in small batches · Availability varies · Contact to order",
+    "filters": [
+      {
+        "id": "all",
+        "label": "All Products"
+      },
+      {
+        "id": "infused-oils",
+        "label": "Infused Oils"
+      },
+      {
+        "id": "lotions",
+        "label": "Lotions & Creams"
+      },
+      {
+        "id": "soaps",
+        "label": "Soaps & Scrubs"
+      },
+      {
+        "id": "body",
+        "label": "Body Care"
+      },
+      {
+        "id": "spiritual",
+        "label": "Spiritual Blends"
+      }
+    ],
+    "headline_emphasis": "Natural",
+    "headline_prefix": "Handcrafted",
+    "headline_suffix": "Products",
+    "intro": "Every item is made by hand in small batches using wild-harvested and ethically sourced botanicals. Products are available while supply lasts.",
+    "item_cta_label": "Inquire",
+    "items": [
+      {
+        "badge": "Bestseller",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Warming, grounding blend. 1.0 fl oz. Supports circulation and skin nourishment.",
+        "id": "cinnamon-infused-oil",
+        "image_key": "cinnamon_oil",
+        "name": "Cinnamon Infused Oil",
+        "price": "$11.75"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Energizing blend with natural antioxidants. 1.0 fl oz. Great for skin brightening.",
+        "id": "coffee-infused-oil",
+        "image_key": "coffee_oil",
+        "name": "Coffee Infused Oil",
+        "price": "$10.50"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Purifying and clarifying. 1.0 fl oz. Respiratory support and mental clarity.",
+        "id": "eucalyptus-infused-oil",
+        "image_key": "eucalyptus_oil",
+        "name": "Eucalyptus Infused Oil",
+        "price": "$10.50"
+      },
+      {
+        "badge": "Popular",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Calming and restorative. 1.0 fl oz. Promotes relaxation and restful sleep.",
+        "id": "lavender-infused-oil",
+        "image_key": "lavender_oil",
+        "name": "Lavender Infused Oil",
+        "price": "$12.00"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Bright and uplifting. 1.0 fl oz. Energizes and brightens dull skin.",
+        "id": "citrus-blend-infused-oil",
+        "image_key": "citrus_oil",
+        "name": "Citrus Blend Infused Oil",
+        "price": "$11.50"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Romantic and regenerative. 1.0 fl oz. Deep skin nourishment and softening.",
+        "id": "rose-infused-oil",
+        "image_key": "rose_oil",
+        "name": "Rose Infused Oil",
+        "price": "$13.25"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Clarifying and stimulating. 1.0 fl oz. Supports hair growth and scalp health.",
+        "id": "rosemary-infused-oil",
+        "image_key": "rosemary_oil",
+        "name": "Rosemary Infused Oil",
+        "price": "$10.50"
+      },
+      {
+        "badge": "",
+        "category_id": "infused-oils",
+        "category_label": "Infused Oils",
+        "description": "Cool and invigorating. 1.0 fl oz. Headache relief and refreshing skin tonic.",
+        "id": "peppermint-spearmint-blend",
+        "image_key": "peppermint_oil",
+        "name": "Peppermint Spearmint Blend",
+        "price": "$12.50"
+      },
+      {
+        "badge": "",
+        "category_id": "soaps",
+        "category_label": "Soaps & Scrubs",
+        "description": "Gently exfoliating bar soap. Soothing for sensitive and dry skin types.",
+        "id": "cinnamon-oatmeal-delight",
+        "image_key": "cinnamon_soap",
+        "name": "Cinnamon Oatmeal Delight",
+        "price": "$10.00"
+      },
+      {
+        "badge": "New",
+        "category_id": "soaps",
+        "category_label": "Soaps & Scrubs",
+        "description": "Indulgent full-body exfoliant. Leaves skin silky-smooth with a warm, sweet scent.",
+        "id": "vanilla-mocha-sugar-scrub",
+        "image_key": "mocha_scrub",
+        "name": "Vanilla Mocha Sugar Scrub",
+        "price": "$10.00"
+      },
+      {
+        "badge": "",
+        "category_id": "lotions",
+        "category_label": "Lotions & Creams",
+        "description": "Rich, fast-absorbing formula. Multi-herb infusion for all-day moisture and glow.",
+        "id": "herbal-botanical-body-lotion",
+        "image_key": "body_lotion",
+        "name": "Herbal Botanical Body Lotion",
+        "price": "$14.00"
+      },
+      {
+        "badge": "",
+        "category_id": "lotions",
+        "category_label": "Lotions & Creams",
+        "description": "Dense, nourishing cream with healing herbs. Ideal for dry, cracked, or troubled skin.",
+        "id": "natural-healing-body-cream",
+        "image_key": "body_cream",
+        "name": "Natural Healing Body Cream",
+        "price": "$15.00"
+      },
+      {
+        "badge": "",
+        "category_id": "body",
+        "category_label": "Body Care",
+        "description": "Light, refreshing herbal mist. Natural fragrance with skin-nourishing botanical extracts.",
+        "id": "botanical-body-spray",
+        "image_key": "body_spray",
+        "name": "Botanical Body Spray",
+        "price": "$11.00"
+      },
+      {
+        "badge": "Sacred",
+        "category_id": "spiritual",
+        "category_label": "Spiritual Blends",
+        "description": "Custom-crafted anointing oil. Herbs chosen for your specific intentions and energy work.",
+        "id": "spiritual-intention-blend",
+        "image_key": "spiritual_blend",
+        "name": "Spiritual Intention Blend",
+        "price": "$16.00"
+      }
+    ],
+    "section_label": "The Apothecary"
+  },
+  "seo": {
+    "address_locality": "Sacramento",
+    "address_region": "CA",
+    "area_served": [
+      "Sacramento",
+      "Elk Grove",
+      "Rancho Cordova",
+      "Davis",
+      "West Sacramento"
+    ],
+    "business_description": "Handcrafted herbal remedies and spiritual wellness services rooted in ancestral plant wisdom.",
+    "business_name": "Cayamae's Ancient Garden",
+    "canonical_url": "",
+    "description": "Handcrafted herbal remedies, infused oils, natural soaps, lotions, and spiritual wellness services rooted in ancient plant wisdom. Sacramento, CA.",
+    "faq": [
+      {
+        "answer": "Cayamae crafts infused oils, soaps, creams, sprays, spiritual blends, and other botanical remedies in small batches using carefully chosen herbs and natural ingredients.",
+        "question": "What kinds of products does Cayamae's Ancient Garden offer?"
+      },
+      {
+        "answer": "Yes. Cayamae offers custom ritual and intention blends shaped around the individual's goals, spiritual work, and energetic needs.",
+        "question": "Do you create custom spiritual or intention blends?"
+      },
+      {
+        "answer": "Use the contact information on the site to reach out directly. Availability varies because products are handmade in small batches, so direct inquiry is the best way to confirm current stock.",
+        "question": "How do I place an order for handmade herbal products?"
+      },
+      {
+        "answer": "Yes. Cayamae offers spiritual guidance and related services through direct conversation to determine fit, availability, and the most supportive path for each person.",
+        "question": "Do you offer spiritual guidance sessions in Sacramento?"
+      }
+    ],
+    "google_site_verification": "",
+    "keywords": "herbal apothecary Sacramento, handcrafted infused oils, natural soap Sacramento, spiritual wellness Sacramento, herbal remedies California, custom ritual blends, spiritual guidance Sacramento",
+    "og_image": "",
+    "postal_code": "95877",
+    "robots": "index, follow",
+    "same_as": [
+      "https://www.patreon.com/PLACEHOLDER_PATREON"
+    ],
+    "schema_type": "Organization",
+    "title": "Cayamae's Ancient Garden | Herbal Apothecary & Spiritual Wellness",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "",
+    "twitter_site": ""
+  },
+  "site": {
+    "address_line": "Sacramento, CA 95877",
+    "brand_name": "Cayamae's Ancient Garden",
+    "brand_tagline": "Plant Wisdom · Sacred Craft",
+    "city_region": "Sacramento, California",
+    "email": "pleasuresenses@yahoo.com",
+    "location_note": "Sacramento, CA · In-person & distance sessions available",
+    "mailto_subject": "Spiritual Services Inquiry",
+    "phone": "(916) 613-0046"
+  },
+  "spiritual": {
+    "card_section_label": "Book a Session",
+    "card_text": "All spiritual services are offered through direct conversation. Please contact Cayamae to discuss your needs, her availability, and what form of service may best serve your path.",
+    "card_title": "Reach Out Directly",
+    "cta_href": "mailto:pleasuresenses@yahoo.com?subject=Spiritual%20Services%20Inquiry",
+    "cta_label": "Send a Message",
+    "headline_emphasis": "Healing",
+    "headline_prefix": "Spiritual",
+    "headline_suffix": "& Guidance",
+    "note": "Sacramento, CA · In-person & distance sessions available",
+    "paragraphs": [
+      "Beyond her handcrafted botanical products, Cayamae offers a range of spiritual and intuitive services drawn from years of study, practice, and ancestral connection. Her gifts are deeply personal — each session is unique to the individual seeking guidance.",
+      "These are not commercial services. They are sacred exchanges between healer and seeker. Please reach out directly to discuss availability, offerings, and how she may be able to support your journey."
+    ],
+    "section_label": "Sacred Offerings",
+    "services": [
+      {
+        "icon_key": "spark",
+        "label": "Intuitive Reading & Spiritual Guidance"
+      },
+      {
+        "icon_key": "clock",
+        "label": "Herbal Remedy Consultations"
+      },
+      {
+        "icon_key": "drop",
+        "label": "Custom Ritual & Intention Blends"
+      },
+      {
+        "icon_key": "heart",
+        "label": "Energy Clearing & Space Blessing"
+      },
+      {
+        "icon_key": "home",
+        "label": "Ancestral Plant Wisdom Teachings"
+      }
+    ]
+  },
+  "support": {
+    "button_href": "https://www.patreon.com/PLACEHOLDER_PATREON",
+    "button_label": "Support on Patreon",
+    "headline_emphasis": "Ancient Wisdom",
+    "headline_prefix": "Keep",
+    "headline_suffix": "Alive & Growing",
+    "paragraph": "Cayamae's work is a labor of love — gathering wild herbs, crafting remedies, sharing knowledge passed down through generations. Your support on Patreon helps sustain her practice, expand her offerings, and keep this sacred knowledge accessible to those who need it most.",
+    "section_label": "Support the Garden"
+  },
+  "testimonials": {
+    "headline_emphasis": "Garden",
+    "headline_prefix": "Words from the",
+    "items": [
+      {
+        "location": "Sacramento, CA",
+        "name": "M. Williams",
+        "quote": "The lavender infused oil changed my sleep completely. I've tried so many things over the years — nothing has worked like this. You can feel the intention in every bottle."
+      },
+      {
+        "location": "Oakland, CA",
+        "name": "D. Carter",
+        "quote": "I came to her for a spiritual reading not knowing what to expect. She saw things no one else could have known. I left feeling lighter than I have in years. A true gift."
+      },
+      {
+        "location": "Elk Grove, CA",
+        "name": "T. Johnson",
+        "quote": "The cinnamon oatmeal soap is unlike anything at the store. My skin has never felt this healthy. I've been ordering her products for over a year now and every batch is perfect."
+      }
+    ],
+    "section_label": "Community Voices"
+  }
+}
