@@ -3,340 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ content.seo.title }}</title>
-  <meta name="description" content="{{ content.seo.description }}" />
-  <meta name="keywords" content="{{ content.seo.keywords }}" />
-  <meta name="robots" content="{{ content.seo.robots }}" />
-  {% if content.seo.canonical_url %}
-  <link rel="canonical" href="{{ content.seo.canonical_url }}" />
-  {% endif %}
+  <title>Cayamae&#39;s Ancient Garden | Herbal Apothecary &amp; Spiritual Wellness</title>
+  <meta name="description" content="Handcrafted herbal remedies, infused oils, natural soaps, lotions, and spiritual wellness services rooted in ancient plant wisdom. Sacramento, CA." />
+  <meta name="keywords" content="herbal apothecary Sacramento, handcrafted infused oils, natural soap Sacramento, spiritual wellness Sacramento, herbal remedies California, custom ritual blends, spiritual guidance Sacramento" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://pcphantom.github.io/cayamaes_carden" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ base_url }}/" />
-  <meta property="og:site_name" content="{{ content.seo.business_name or content.site.brand_name }}" />
-  <meta property="og:title" content="{{ content.seo.title }}" />
-  <meta property="og:description" content="{{ content.seo.description }}" />
-  {% if content.seo.og_image %}
-  <meta property="og:image" content="{{ content.seo.og_image }}" />
-  {% endif %}
-  <meta name="twitter:card" content="{{ content.seo.twitter_card }}" />
-  {% if content.seo.twitter_site %}
-  <meta name="twitter:site" content="{{ content.seo.twitter_site }}" />
-  {% endif %}
-  <meta name="twitter:title" content="{{ content.seo.title }}" />
-  <meta name="twitter:description" content="{{ content.seo.description }}" />
-  {% if content.seo.twitter_image %}
-  <meta name="twitter:image" content="{{ content.seo.twitter_image }}" />
-  {% endif %}
-  {% if content.seo.google_site_verification %}
-  <meta name="google-site-verification" content="{{ content.seo.google_site_verification }}" />
-  {% endif %}
-  <script type="application/ld+json" id="schema-org">{{ schema_json | safe }}</script>
+  <meta property="og:url" content="https://pcphantom.github.io/cayamaes_carden/" />
+  <meta property="og:site_name" content="Cayamae&#39;s Ancient Garden" />
+  <meta property="og:title" content="Cayamae&#39;s Ancient Garden | Herbal Apothecary &amp; Spiritual Wellness" />
+  <meta property="og:description" content="Handcrafted herbal remedies, infused oils, natural soaps, lotions, and spiritual wellness services rooted in ancient plant wisdom. Sacramento, CA." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:title" content="Cayamae&#39;s Ancient Garden | Herbal Apothecary &amp; Spiritual Wellness" />
+  <meta name="twitter:description" content="Handcrafted herbal remedies, infused oils, natural soaps, lotions, and spiritual wellness services rooted in ancient plant wisdom. Sacramento, CA." />
+
+
+  <script type="application/ld+json" id="schema-org">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pcphantom.github.io/cayamaes_carden/#organization",
+      "name": "Cayamae's Ancient Garden",
+      "url": "https://pcphantom.github.io/cayamaes_carden",
+      "description": "Handcrafted herbal remedies and spiritual wellness services rooted in ancestral plant wisdom.",
+      "telephone": "(916) 613-0046",
+      "email": "pleasuresenses@yahoo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "postalCode": "95877"
+      },
+      "sameAs": [
+        "https://www.patreon.com/PLACEHOLDER_PATREON"
+      ],
+      "areaServed": [
+        "Sacramento",
+        "Elk Grove",
+        "Rancho Cordova",
+        "Davis",
+        "West Sacramento"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pcphantom.github.io/cayamaes_carden/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What kinds of products does Cayamae's Ancient Garden offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cayamae crafts infused oils, soaps, creams, sprays, spiritual blends, and other botanical remedies in small batches using carefully chosen herbs and natural ingredients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you create custom spiritual or intention blends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Cayamae offers custom ritual and intention blends shaped around the individual's goals, spiritual work, and energetic needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I place an order for handmade herbal products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the contact information on the site to reach out directly. Availability varies because products are handmade in small batches, so direct inquiry is the best way to confirm current stock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer spiritual guidance sessions in Sacramento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Cayamae offers spiritual guidance and related services through direct conversation to determine fit, availability, and the most supportive path for each person."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
-{% macro pillar_icon(index) -%}
-  {% if index == 0 %}
-  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M16 4 Q20 10 20 16 Q20 22 16 28 Q12 22 12 16 Q12 10 16 4Z" fill="#4a6741" opacity="0.7"/>
-    <path d="M4 14 Q10 14 14 18 Q10 22 4 22" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-    <path d="M28 14 Q22 14 18 18 Q22 22 28 22" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-  </svg>
-  {% elif index == 1 %}
-  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="16" cy="16" r="10" stroke="#c8973a" stroke-width="1.2" fill="none"/>
-    <path d="M16 8 L17.2 12.4 L22 12.4 L18.4 15.2 L19.6 19.6 L16 16.8 L12.4 19.6 L13.6 15.2 L10 12.4 L14.8 12.4 Z" fill="#c8973a" opacity="0.7"/>
-  </svg>
-  {% elif index == 2 %}
-  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M8 24 Q16 4 24 24" stroke="#7a9e72" stroke-width="1.3" fill="none"/>
-    <path d="M12 16 Q16 10 20 16" stroke="#4a6741" stroke-width="1" fill="none"/>
-    <circle cx="16" cy="26" r="3" fill="#c8973a" opacity="0.6"/>
-  </svg>
-  {% else %}
-  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M16 6 L16 26" stroke="#7a9e72" stroke-width="1.3" fill="none"/>
-    <path d="M16 12 Q10 10 8 14 Q10 18 16 16" fill="#4a6741" opacity="0.6"/>
-    <path d="M16 18 Q22 16 24 20 Q22 24 16 22" fill="#4a6741" opacity="0.6"/>
-  </svg>
-  {% endif %}
-{%- endmacro %}
-{% macro product_art(image_key) -%}
-  {% if image_key == 'cinnamon_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d2b1a" stroke="#c8973a" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(200,151,58,0.5)" stroke-width="1"/>
-    <path d="M80 100 Q90 95 110 100 Q120 105 110 115 Q90 120 80 115 Q70 110 80 100Z" fill="#c8973a" opacity="0.25"/>
-    <path d="M90 70 Q100 40 110 70" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-    <ellipse cx="82" cy="48" rx="10" ry="6" transform="rotate(-20 82 48)" fill="#4a6741" opacity="0.7"/>
-    <ellipse cx="118" cy="48" rx="10" ry="6" transform="rotate(20 118 48)" fill="#4a6741" opacity="0.7"/>
-    <circle cx="55" cy="90" r="4" fill="#c8973a" opacity="0.4"/>
-    <circle cx="145" cy="110" r="3" fill="#c8973a" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'coffee_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#2e1a0a" stroke="#c8973a" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#3d2b1a" stroke="#5c4232"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(200,151,58,0.5)" stroke-width="1"/>
-    <circle cx="95" cy="108" r="12" fill="#5c4232" opacity="0.5"/>
-    <circle cx="108" cy="102" r="8" fill="#3d2b1a" opacity="0.7"/>
-    <path d="M90 70 Q100 40 110 70" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-    <circle cx="55" cy="100" r="3" fill="#c8973a" opacity="0.4"/>
-    <circle cx="148" cy="90" r="3" fill="#c8973a" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'eucalyptus_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a3a20" stroke="#7a9e72" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(122,158,114,0.5)" stroke-width="1"/>
-    <path d="M100 170 Q100 80 100 80" stroke="#4a6741" stroke-width="1.2" fill="none"/>
-    <ellipse cx="88" cy="108" rx="14" ry="8" transform="rotate(-20 88 108)" fill="#4a6741" opacity="0.6"/>
-    <ellipse cx="112" cy="122" rx="14" ry="8" transform="rotate(20 112 122)" fill="#4a6741" opacity="0.6"/>
-    <ellipse cx="90" cy="130" rx="12" ry="7" transform="rotate(-30 90 130)" fill="#2e4d30" opacity="0.5"/>
-  </svg>
-  {% elif image_key == 'lavender_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#2d1f40" stroke="#9b7fc0" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#3d2b55" stroke="#7a5fa0"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(155,127,192,0.5)" stroke-width="1"/>
-    <path d="M93 170 Q93 90 93 90" stroke="#7a5fa0" stroke-width="1.2" fill="none"/>
-    <circle cx="93" cy="105" r="4" fill="#9b7fc0" opacity="0.7"/>
-    <circle cx="90" cy="98" r="3" fill="#9b7fc0" opacity="0.6"/>
-    <circle cx="96" cy="98" r="3" fill="#9b7fc0" opacity="0.6"/>
-    <circle cx="91" cy="92" r="2.5" fill="#9b7fc0" opacity="0.5"/>
-    <circle cx="95" cy="92" r="2.5" fill="#9b7fc0" opacity="0.5"/>
-    <path d="M110 165 Q110 95 110 95" stroke="#7a5fa0" stroke-width="1.2" fill="none"/>
-    <circle cx="110" cy="110" r="4" fill="#9b7fc0" opacity="0.7"/>
-    <circle cx="107" cy="103" r="3" fill="#9b7fc0" opacity="0.6"/>
-    <circle cx="113" cy="103" r="3" fill="#9b7fc0" opacity="0.6"/>
-  </svg>
-  {% elif image_key == 'citrus_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d2200" stroke="#e07020" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#5c3800" stroke="#c85020"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(224,112,32,0.5)" stroke-width="1"/>
-    <circle cx="100" cy="110" r="16" fill="#e07020" opacity="0.3"/>
-    <path d="M92 110 Q100 100 108 110 Q100 120 92 110Z" fill="#e07020" opacity="0.5"/>
-    <circle cx="100" cy="110" r="4" fill="#f0d898" opacity="0.5"/>
-    <path d="M88 72 Q100 45 112 72" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-    <ellipse cx="80" cy="50" rx="11" ry="7" transform="rotate(-15 80 50)" fill="#4a6741" opacity="0.6"/>
-    <ellipse cx="120" cy="50" rx="11" ry="7" transform="rotate(15 120 50)" fill="#4a6741" opacity="0.6"/>
-  </svg>
-  {% elif image_key == 'rose_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d1020" stroke="#d05078" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2d0818" stroke="#a03050"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(208,80,120,0.5)" stroke-width="1"/>
-    <circle cx="100" cy="108" r="10" fill="#d05078" opacity="0.4"/>
-    <ellipse cx="100" cy="100" rx="6" ry="9" fill="#d05078" opacity="0.5"/>
-    <ellipse cx="108" cy="106" rx="9" ry="6" fill="#c04068" opacity="0.4"/>
-    <ellipse cx="92" cy="106" rx="9" ry="6" fill="#c04068" opacity="0.4"/>
-    <ellipse cx="100" cy="116" rx="6" ry="9" fill="#c04068" opacity="0.35"/>
-    <circle cx="100" cy="108" r="3" fill="#f0d898" opacity="0.4"/>
-  </svg>
-  {% elif image_key == 'rosemary_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a2e1a" stroke="#4a6741" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(74,103,65,0.6)" stroke-width="1"/>
-    <path d="M100 170 Q100 85 100 85" stroke="#7a9e72" stroke-width="1.5" fill="none"/>
-    <line x1="100" y1="92" x2="89" y2="88" stroke="#4a6741" stroke-width="1"/>
-    <line x1="100" y1="100" x2="111" y2="96" stroke="#4a6741" stroke-width="1"/>
-    <line x1="100" y1="108" x2="89" y2="104" stroke="#4a6741" stroke-width="1"/>
-    <line x1="100" y1="116" x2="111" y2="112" stroke="#4a6741" stroke-width="1"/>
-    <line x1="100" y1="124" x2="89" y2="120" stroke="#4a6741" stroke-width="1"/>
-    <circle cx="86" cy="88" r="2.5" fill="#6a9e62" opacity="0.7"/>
-    <circle cx="114" cy="96" r="2.5" fill="#6a9e62" opacity="0.7"/>
-    <circle cx="86" cy="104" r="2.5" fill="#6a9e62" opacity="0.7"/>
-    <circle cx="114" cy="112" r="2.5" fill="#6a9e62" opacity="0.7"/>
-  </svg>
-  {% elif image_key == 'peppermint_oil' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#0d2218" stroke="#3a9e72" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#1a3d30" stroke="#2a7e52"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(58,158,114,0.5)" stroke-width="1"/>
-    <path d="M93 160 Q93 90 93 90" stroke="#3a9e72" stroke-width="1.3" fill="none"/>
-    <ellipse cx="83" cy="103" rx="12" ry="7" transform="rotate(-15 83 103)" fill="#2e7a52" opacity="0.65"/>
-    <ellipse cx="105" cy="115" rx="12" ry="7" transform="rotate(15 105 115)" fill="#2e7a52" opacity="0.65"/>
-    <ellipse cx="85" cy="127" rx="11" ry="6" transform="rotate(-10 85 127)" fill="#2e7a52" opacity="0.5"/>
-    <circle cx="148" cy="85" r="3" fill="#3a9e72" opacity="0.4"/>
-    <circle cx="52" cy="115" r="2.5" fill="#3a9e72" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'cinnamon_soap' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="60" y="80" width="80" height="55" rx="8" fill="#5c3800" stroke="#c8973a" stroke-width="1.5"/>
-    <rect x="60" y="80" width="80" height="55" rx="8" fill="url(#soap1)" opacity="0.6"/>
-    <defs>
-      <linearGradient id="soap1" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#c8973a" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="#5c3800" stop-opacity="0"/>
-      </linearGradient>
-    </defs>
-    <text x="100" y="112" text-anchor="middle" font-size="9" fill="#f0d898" opacity="0.7" font-family="serif" font-style="italic">Oatmeal</text>
-    <ellipse cx="80" cy="148" rx="18" ry="10" fill="#c8973a" opacity="0.25"/>
-    <ellipse cx="115" cy="152" rx="14" ry="8" fill="#c8973a" opacity="0.2"/>
-    <circle cx="55" cy="70" r="3" fill="#c8973a" opacity="0.4"/>
-    <circle cx="148" cy="65" r="2.5" fill="#c8973a" opacity="0.35"/>
-    <path d="M68 75 Q80 55 95 52 Q110 55 118 72" stroke="#4a6741" stroke-width="1" fill="none"/>
-    <ellipse cx="95" cy="50" rx="8" ry="5" fill="#4a6741" opacity="0.5"/>
-  </svg>
-  {% elif image_key == 'mocha_scrub' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M70 160 Q65 120 68 90 L132 90 Q135 120 130 160 Z" fill="#3d2b1a" stroke="#c8973a" stroke-width="1.5"/>
-    <ellipse cx="100" cy="90" rx="32" ry="10" fill="#2e1a0a" stroke="#c8973a" stroke-width="1"/>
-    <ellipse cx="100" cy="90" rx="28" ry="7" fill="#5c3800" opacity="0.7"/>
-    <circle cx="85" cy="110" r="2" fill="#f0d898" opacity="0.4"/>
-    <circle cx="98" cy="108" r="1.5" fill="#f0d898" opacity="0.35"/>
-    <circle cx="112" cy="112" r="2" fill="#f0d898" opacity="0.4"/>
-    <circle cx="90" cy="125" r="1.5" fill="#f0d898" opacity="0.3"/>
-    <circle cx="106" cy="128" r="2" fill="#f0d898" opacity="0.35"/>
-    <path d="M90 85 Q100 65 110 85" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-    <ellipse cx="82" cy="62" rx="10" ry="6" transform="rotate(-20 82 62)" fill="#4a6741" opacity="0.5"/>
-    <ellipse cx="118" cy="62" rx="10" ry="6" transform="rotate(20 118 62)" fill="#4a6741" opacity="0.5"/>
-  </svg>
-  {% elif image_key == 'body_lotion' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="80" y="65" width="40" height="105" rx="8" fill="#1e3320" stroke="#4a6741" stroke-width="1.5"/>
-    <rect x="84" y="50" width="32" height="20" rx="5" fill="#2e4d30" stroke="#4a6741"/>
-    <rect x="88" y="44" width="24" height="12" rx="3" fill="#4a6741"/>
-    <rect x="96" y="30" width="8" height="18" rx="2" fill="#2e4d30" stroke="#4a6741"/>
-    <rect x="88" y="28" width="24" height="6" rx="2" fill="#c8973a" opacity="0.8"/>
-    <rect x="85" y="85" width="30" height="40" rx="3" fill="none" stroke="rgba(200,151,58,0.4)" stroke-width="1"/>
-    <path d="M90 96 Q100 90 110 96 Q100 102 90 96Z" fill="#c8973a" opacity="0.3"/>
-    <line x1="90" y1="110" x2="110" y2="110" stroke="rgba(200,151,58,0.3)" stroke-width="0.75"/>
-    <line x1="90" y1="116" x2="105" y2="116" stroke="rgba(200,151,58,0.2)" stroke-width="0.75"/>
-    <circle cx="145" cy="95" r="3" fill="#c8973a" opacity="0.35"/>
-    <circle cx="55" cy="85" r="2.5" fill="#c8973a" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'body_cream' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M70 155 Q68 115 72 90 L128 90 Q132 115 130 155 Z" fill="#2e4d30" stroke="#7a9e72" stroke-width="1.5"/>
-    <ellipse cx="100" cy="90" rx="30" ry="9" fill="#1e3320" stroke="#7a9e72"/>
-    <ellipse cx="100" cy="90" rx="25" ry="6" fill="#4a6741" opacity="0.6"/>
-    <rect x="76" y="105" width="48" height="35" rx="3" fill="none" stroke="rgba(122,158,114,0.4)" stroke-width="1"/>
-    <path d="M85 122 Q100 116 115 122 Q100 128 85 122Z" fill="#7a9e72" opacity="0.25"/>
-    <circle cx="56" cy="110" r="3" fill="#7a9e72" opacity="0.4"/>
-    <circle cx="148" cy="100" r="2.5" fill="#7a9e72" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'body_spray' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="85" y="60" width="35" height="115" rx="10" fill="#1a2e1a" stroke="#4a6741" stroke-width="1.5"/>
-    <rect x="90" y="45" width="25" height="20" rx="5" fill="#2e4d30" stroke="#4a6741"/>
-    <path d="M110 42 L125 35 L130 40" stroke="#4a6741" stroke-width="1.5" fill="none"/>
-    <circle cx="130" cy="40" r="3" fill="#c8973a" opacity="0.7"/>
-    <circle cx="138" cy="32" r="1.5" fill="#7a9e72" opacity="0.4"/>
-    <circle cx="143" cy="28" r="1" fill="#7a9e72" opacity="0.3"/>
-    <circle cx="140" cy="36" r="1" fill="#7a9e72" opacity="0.3"/>
-    <circle cx="148" cy="34" r="1.5" fill="#7a9e72" opacity="0.25"/>
-    <rect x="90" y="90" width="30" height="35" rx="3" fill="none" stroke="rgba(200,151,58,0.4)" stroke-width="1"/>
-    <line x1="93" y1="100" x2="117" y2="100" stroke="rgba(200,151,58,0.35)" stroke-width="0.75"/>
-    <line x1="93" y1="108" x2="117" y2="108" stroke="rgba(200,151,58,0.25)" stroke-width="0.75"/>
-    <line x1="93" y1="115" x2="110" y2="115" stroke="rgba(200,151,58,0.2)" stroke-width="0.75"/>
-    <circle cx="55" cy="90" r="3" fill="#4a6741" opacity="0.4"/>
-    <circle cx="150" cy="75" r="2.5" fill="#4a6741" opacity="0.3"/>
-  </svg>
-  {% elif image_key == 'spiritual_blend' %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a0f2e" stroke="#9b7fc0" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2a1a45" stroke="#7a5fa0"/>
-    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(155,127,192,0.5)" stroke-width="1"/>
-    <circle cx="100" cy="108" r="14" stroke="#9b7fc0" stroke-width="0.8" fill="none" opacity="0.5"/>
-    <path d="M100 94 L102 101 L109 101 L103 106 L105 113 L100 108 L95 113 L97 106 L91 101 L98 101 Z" fill="#c8973a" opacity="0.6"/>
-    <circle cx="82" cy="90" r="1.5" fill="#f0d898" opacity="0.6"/>
-    <circle cx="118" cy="88" r="1.5" fill="#f0d898" opacity="0.6"/>
-    <circle cx="78" cy="120" r="1" fill="#f0d898" opacity="0.4"/>
-    <circle cx="122" cy="122" r="1" fill="#f0d898" opacity="0.4"/>
-    <path d="M50 80 Q45 95 55 107 Q42 100 42 88 Q42 76 50 80Z" fill="#c8973a" opacity="0.35"/>
-    <circle cx="148" cy="85" r="5" stroke="#9b7fc0" stroke-width="0.8" fill="none" opacity="0.45"/>
-  </svg>
-  {% else %}
-  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1e3320" stroke="#c8973a" stroke-width="1.5"/>
-    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
-    <path d="M90 70 Q100 40 110 70" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-  </svg>
-  {% endif %}
-{%- endmacro %}
-{% macro spiritual_icon(icon_key) -%}
-  {% if icon_key == 'spark' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M12 2 L13.4 8.6 L20 10 L13.4 11.4 L12 18 L10.6 11.4 L4 10 L10.6 8.6 Z"/>
-  </svg>
-  {% elif icon_key == 'clock' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M12 6 L12 12 L16 14"/>
-  </svg>
-  {% elif icon_key == 'drop' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M12 22 C6 22 3 16 3 12 C3 8 6 2 12 2 C18 2 21 8 21 12 C21 16 18 22 12 22 Z"/>
-    <path d="M12 7 L12 12 L15 15"/>
-  </svg>
-  {% elif icon_key == 'heart' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-  </svg>
-  {% else %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-    <polyline points="9 22 9 12 15 12 15 22"/>
-  </svg>
-  {% endif %}
-{%- endmacro %}
-{% macro contact_icon(kind) -%}
-  {% if kind == 'phone' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-1.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-  </svg>
-  {% elif kind == 'email' %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-    <polyline points="22,6 12,13 2,6"/>
-  </svg>
-  {% else %}
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-    <circle cx="12" cy="10" r="3"/>
-  </svg>
-  {% endif %}
-{%- endmacro %}
-{% macro social_icon(platform) -%}
-  {% if platform == 'etsy' %}
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M10 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-5h4v-2h-4v-4h5V7h-5V4a1 1 0 0 0-1-1z"/>
-  </svg>
-  {% elif platform == 'patreon' %}
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z"/>
-  </svg>
-  {% else %}
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-  </svg>
-  {% endif %}
-{%- endmacro %}
-{% macro testimonial_avatar() -%}
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-  </svg>
-{%- endmacro %}
+
+
+
+
+
+
 
 <nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="#hero" class="nav-logo" aria-label="{{ content.site.brand_name }} — Home">
-    <span class="nav-logo-main">{{ content.site.brand_name }}</span>
-    <span class="nav-logo-sub">{{ content.site.brand_tagline }}</span>
+  <a href="#hero" class="nav-logo" aria-label="Cayamae&#39;s Ancient Garden — Home">
+    <span class="nav-logo-main">Cayamae&#39;s Ancient Garden</span>
+    <span class="nav-logo-sub">Plant Wisdom · Sacred Craft</span>
   </a>
 
   <ul class="nav-links" role="list">
-    {% for link in content.nav.links %}
+
     <li>
-      <a href="{{ link.href }}"
-         {% if link.variant == 'support' %}class="nav-patreon"{% endif %}
-         {% if link.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+      <a href="#philosophy"
+
+         >Our Story</a>
     </li>
-    {% endfor %}
+
+    <li>
+      <a href="#products"
+
+         >Shop</a>
+    </li>
+
+    <li>
+      <a href="#spiritual"
+
+         >Spiritual Services</a>
+    </li>
+
+    <li>
+      <a href="#testimonials"
+
+         >Community</a>
+    </li>
+
+    <li>
+      <a href="#footer"
+
+         >Contact</a>
+    </li>
+
+    <li>
+      <a href="https://www.patreon.com/PLACEHOLDER_PATREON"
+         class="nav-patreon"
+         target="_blank" rel="noopener noreferrer">Support Her Work</a>
+    </li>
+
   </ul>
 
   <button id="hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -346,11 +155,31 @@
 
 <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile navigation">
   <button id="menuClose" class="mobile-menu-close" aria-label="Close menu">✕</button>
-  {% for link in content.nav.links %}
-  <a href="{{ link.href }}"
-     {% if link.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-     {% if link.variant == 'support' %}style="color: var(--gold-pale);"{% endif %}>{{ link.label }}</a>
-  {% endfor %}
+
+  <a href="#philosophy"
+
+     >Our Story</a>
+
+  <a href="#products"
+
+     >Shop</a>
+
+  <a href="#spiritual"
+
+     >Spiritual Services</a>
+
+  <a href="#testimonials"
+
+     >Community</a>
+
+  <a href="#footer"
+
+     >Contact</a>
+
+  <a href="https://www.patreon.com/PLACEHOLDER_PATREON"
+     target="_blank" rel="noopener noreferrer"
+     style="color: var(--gold-pale);">Support Her Work</a>
+
 </div>
 
 <section id="hero" aria-label="Welcome">
@@ -387,20 +216,20 @@
   </div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">{{ content.hero.eyebrow }}</p>
+    <p class="hero-eyebrow">Rooted in Ancient Wisdom · Handcrafted with Love</p>
     <h1 class="hero-title">
-      {{ content.hero.title_line }}<br><em>{{ content.hero.title_emphasis }}</em>
+      Cayamae&#39;s<br><em>Ancient Garden</em>
     </h1>
-    <p class="hero-subtitle">{{ content.hero.subtitle }}</p>
-    <p class="hero-tagline">{{ content.hero.tagline }}</p>
+    <p class="hero-subtitle">Where the Earth Heals &amp; the Spirit Blooms</p>
+    <p class="hero-tagline">Wild-harvested herbs. Small-batch remedies. Handcrafted with intention for your body, your home, and your soul.</p>
     <div class="hero-cta">
-      <a href="{{ content.hero.cta_primary_href }}" class="btn-primary">{{ content.hero.cta_primary_label }}</a>
-      <a href="{{ content.hero.cta_secondary_href }}" class="btn-outline">{{ content.hero.cta_secondary_label }}</a>
+      <a href="#products" class="btn-primary">Explore the Apothecary</a>
+      <a href="#spiritual" class="btn-outline">Spiritual Services</a>
     </div>
   </div>
 
   <div class="hero-scroll" aria-hidden="true">
-    <span>{{ content.hero.scroll_label }}</span>
+    <span>Discover</span>
     <div class="scroll-line"></div>
   </div>
 </section>
@@ -442,31 +271,80 @@
       </svg>
 
       <div class="philosophy-quote-block">
-        <p>"{{ content.philosophy.quote_text }}"</p>
-        <cite>— {{ content.philosophy.quote_attribution }}</cite>
+        <p>"One size does not fit all — our formulas are created to bring you closer to nature."</p>
+        <cite>— Cayamae&#39;s Ancient Garden</cite>
       </div>
     </div>
 
     <div class="philosophy-text">
-      <span class="section-label">{{ content.philosophy.section_label }}</span>
+      <span class="section-label">Our Story &amp; Philosophy</span>
       <h2>
-        {{ content.philosophy.headline_prefix }} <em>{{ content.philosophy.headline_emphasis }}</em><br>
-        {{ content.philosophy.headline_suffix }}
+        Creating for Your <em>Uniqueness</em><br>
+        Each Day
       </h2>
-      {% for paragraph in content.philosophy.paragraphs %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
+
+      <p>Cayamae&#39;s Ancient Garden was born from a deep reverence for the healing power of plants and a calling to share that wisdom. Every product is made by hand in small batches, drawing on traditional plant knowledge passed down through generations and refined through years of practice.</p>
+
+      <p>We believe your body deserves ingredients you can pronounce — wild-harvested herbs, cold-pressed oils, and botanicals gathered with care and intention. Nothing synthetic. Nothing mass-produced. Everything made just for you.</p>
+
 
       <div class="philosophy-pillars">
-        {% for pillar in content.philosophy.pillars %}
-        <div class="pillar reveal{% if loop.index > 1 %} reveal-delay-{{ loop.index }}{% endif %}">
-          {{ pillar_icon(loop.index0) }}
+
+        <div class="pillar reveal">
+
+  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 4 Q20 10 20 16 Q20 22 16 28 Q12 22 12 16 Q12 10 16 4Z" fill="#4a6741" opacity="0.7"/>
+    <path d="M4 14 Q10 14 14 18 Q10 22 4 22" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+    <path d="M28 14 Q22 14 18 18 Q22 22 28 22" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+  </svg>
+
           <div class="pillar-text">
-            <strong>{{ pillar.title }}</strong>
-            <span>{{ pillar.description }}</span>
+            <strong>Wild-Harvested</strong>
+            <span>Botanicals gathered from nature, never factory-farmed</span>
           </div>
         </div>
-        {% endfor %}
+
+        <div class="pillar reveal reveal-delay-2">
+
+  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="16" cy="16" r="10" stroke="#c8973a" stroke-width="1.2" fill="none"/>
+    <path d="M16 8 L17.2 12.4 L22 12.4 L18.4 15.2 L19.6 19.6 L16 16.8 L12.4 19.6 L13.6 15.2 L10 12.4 L14.8 12.4 Z" fill="#c8973a" opacity="0.7"/>
+  </svg>
+
+          <div class="pillar-text">
+            <strong>Small Batch</strong>
+            <span>Made with intention; every batch receives full attention</span>
+          </div>
+        </div>
+
+        <div class="pillar reveal reveal-delay-3">
+
+  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M8 24 Q16 4 24 24" stroke="#7a9e72" stroke-width="1.3" fill="none"/>
+    <path d="M12 16 Q16 10 20 16" stroke="#4a6741" stroke-width="1" fill="none"/>
+    <circle cx="16" cy="26" r="3" fill="#c8973a" opacity="0.6"/>
+  </svg>
+
+          <div class="pillar-text">
+            <strong>Ancient Wisdom</strong>
+            <span>Rooted in traditional plant medicine and herbalism</span>
+          </div>
+        </div>
+
+        <div class="pillar reveal reveal-delay-4">
+
+  <svg class="pillar-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 6 L16 26" stroke="#7a9e72" stroke-width="1.3" fill="none"/>
+    <path d="M16 12 Q10 10 8 14 Q10 18 16 16" fill="#4a6741" opacity="0.6"/>
+    <path d="M16 18 Q22 16 24 20 Q22 24 16 22" fill="#4a6741" opacity="0.6"/>
+  </svg>
+
+          <div class="pillar-text">
+            <strong>For All Bodies</strong>
+            <span>Custom formulas — one size does not fit all</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -474,42 +352,448 @@
 
 <section id="products" aria-label="Shop our products">
   <div class="products-header reveal">
-    <span class="section-label">{{ content.products.section_label }}</span>
-    <h2>{{ content.products.headline_prefix }} <em>{{ content.products.headline_emphasis }}</em> {{ content.products.headline_suffix }}</h2>
-    <p>{{ content.products.intro }}</p>
+    <span class="section-label">The Apothecary</span>
+    <h2>Handcrafted <em>Natural</em> Products</h2>
+    <p>Every item is made by hand in small batches using wild-harvested and ethically sourced botanicals. Products are available while supply lasts.</p>
   </div>
 
   <div class="products-filter reveal" role="group" aria-label="Filter products by category">
-    {% for filter in content.products.filters %}
-    <button class="filter-btn{% if loop.first %} active{% endif %}" data-filter="{{ filter.id }}">{{ filter.label }}</button>
-    {% endfor %}
+
+    <button class="filter-btn active" data-filter="all">All Products</button>
+
+    <button class="filter-btn" data-filter="infused-oils">Infused Oils</button>
+
+    <button class="filter-btn" data-filter="lotions">Lotions &amp; Creams</button>
+
+    <button class="filter-btn" data-filter="soaps">Soaps &amp; Scrubs</button>
+
+    <button class="filter-btn" data-filter="body">Body Care</button>
+
+    <button class="filter-btn" data-filter="spiritual">Spiritual Blends</button>
+
   </div>
 
   <div class="products-grid" id="productsGrid">
-    {% for product in content.products['items'] %}
-    <article class="product-card" data-category="{{ product.category_id }}" aria-label="{{ product.name }}">
+
+    <article class="product-card" data-category="infused-oils" aria-label="Cinnamon Infused Oil">
       <div class="product-image">
-        {% if product.badge %}<span class="product-badge">{{ product.badge }}</span>{% endif %}
-        {{ product_art(product.image_key) }}
+        <span class="product-badge">Bestseller</span>
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d2b1a" stroke="#c8973a" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(200,151,58,0.5)" stroke-width="1"/>
+    <path d="M80 100 Q90 95 110 100 Q120 105 110 115 Q90 120 80 115 Q70 110 80 100Z" fill="#c8973a" opacity="0.25"/>
+    <path d="M90 70 Q100 40 110 70" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+    <ellipse cx="82" cy="48" rx="10" ry="6" transform="rotate(-20 82 48)" fill="#4a6741" opacity="0.7"/>
+    <ellipse cx="118" cy="48" rx="10" ry="6" transform="rotate(20 118 48)" fill="#4a6741" opacity="0.7"/>
+    <circle cx="55" cy="90" r="4" fill="#c8973a" opacity="0.4"/>
+    <circle cx="145" cy="110" r="3" fill="#c8973a" opacity="0.3"/>
+  </svg>
+
       </div>
       <div class="product-info">
-        <p class="product-category">{{ product.category_label }}</p>
-        <h3 class="product-name">{{ product.name }}</h3>
-        <p class="product-desc">{{ product.description }}</p>
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Cinnamon Infused Oil</h3>
+        <p class="product-desc">Warming, grounding blend. 1.0 fl oz. Supports circulation and skin nourishment.</p>
         <div class="product-footer">
-          <span class="product-price">{{ product.price }}</span>
-          <button class="product-add" aria-label="{{ content.products.item_cta_label }} {{ product.name }}">{{ content.products.item_cta_label }}</button>
+          <span class="product-price">$11.75</span>
+          <button class="product-add" aria-label="Inquire Cinnamon Infused Oil">Inquire</button>
         </div>
       </div>
     </article>
-    {% endfor %}
+
+    <article class="product-card" data-category="infused-oils" aria-label="Coffee Infused Oil">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#2e1a0a" stroke="#c8973a" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#3d2b1a" stroke="#5c4232"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(200,151,58,0.5)" stroke-width="1"/>
+    <circle cx="95" cy="108" r="12" fill="#5c4232" opacity="0.5"/>
+    <circle cx="108" cy="102" r="8" fill="#3d2b1a" opacity="0.7"/>
+    <path d="M90 70 Q100 40 110 70" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+    <circle cx="55" cy="100" r="3" fill="#c8973a" opacity="0.4"/>
+    <circle cx="148" cy="90" r="3" fill="#c8973a" opacity="0.3"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Coffee Infused Oil</h3>
+        <p class="product-desc">Energizing blend with natural antioxidants. 1.0 fl oz. Great for skin brightening.</p>
+        <div class="product-footer">
+          <span class="product-price">$10.50</span>
+          <button class="product-add" aria-label="Inquire Coffee Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Eucalyptus Infused Oil">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a3a20" stroke="#7a9e72" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(122,158,114,0.5)" stroke-width="1"/>
+    <path d="M100 170 Q100 80 100 80" stroke="#4a6741" stroke-width="1.2" fill="none"/>
+    <ellipse cx="88" cy="108" rx="14" ry="8" transform="rotate(-20 88 108)" fill="#4a6741" opacity="0.6"/>
+    <ellipse cx="112" cy="122" rx="14" ry="8" transform="rotate(20 112 122)" fill="#4a6741" opacity="0.6"/>
+    <ellipse cx="90" cy="130" rx="12" ry="7" transform="rotate(-30 90 130)" fill="#2e4d30" opacity="0.5"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Eucalyptus Infused Oil</h3>
+        <p class="product-desc">Purifying and clarifying. 1.0 fl oz. Respiratory support and mental clarity.</p>
+        <div class="product-footer">
+          <span class="product-price">$10.50</span>
+          <button class="product-add" aria-label="Inquire Eucalyptus Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Lavender Infused Oil">
+      <div class="product-image">
+        <span class="product-badge">Popular</span>
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#2d1f40" stroke="#9b7fc0" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#3d2b55" stroke="#7a5fa0"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(155,127,192,0.5)" stroke-width="1"/>
+    <path d="M93 170 Q93 90 93 90" stroke="#7a5fa0" stroke-width="1.2" fill="none"/>
+    <circle cx="93" cy="105" r="4" fill="#9b7fc0" opacity="0.7"/>
+    <circle cx="90" cy="98" r="3" fill="#9b7fc0" opacity="0.6"/>
+    <circle cx="96" cy="98" r="3" fill="#9b7fc0" opacity="0.6"/>
+    <circle cx="91" cy="92" r="2.5" fill="#9b7fc0" opacity="0.5"/>
+    <circle cx="95" cy="92" r="2.5" fill="#9b7fc0" opacity="0.5"/>
+    <path d="M110 165 Q110 95 110 95" stroke="#7a5fa0" stroke-width="1.2" fill="none"/>
+    <circle cx="110" cy="110" r="4" fill="#9b7fc0" opacity="0.7"/>
+    <circle cx="107" cy="103" r="3" fill="#9b7fc0" opacity="0.6"/>
+    <circle cx="113" cy="103" r="3" fill="#9b7fc0" opacity="0.6"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Lavender Infused Oil</h3>
+        <p class="product-desc">Calming and restorative. 1.0 fl oz. Promotes relaxation and restful sleep.</p>
+        <div class="product-footer">
+          <span class="product-price">$12.00</span>
+          <button class="product-add" aria-label="Inquire Lavender Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Citrus Blend Infused Oil">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d2200" stroke="#e07020" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#5c3800" stroke="#c85020"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(224,112,32,0.5)" stroke-width="1"/>
+    <circle cx="100" cy="110" r="16" fill="#e07020" opacity="0.3"/>
+    <path d="M92 110 Q100 100 108 110 Q100 120 92 110Z" fill="#e07020" opacity="0.5"/>
+    <circle cx="100" cy="110" r="4" fill="#f0d898" opacity="0.5"/>
+    <path d="M88 72 Q100 45 112 72" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+    <ellipse cx="80" cy="50" rx="11" ry="7" transform="rotate(-15 80 50)" fill="#4a6741" opacity="0.6"/>
+    <ellipse cx="120" cy="50" rx="11" ry="7" transform="rotate(15 120 50)" fill="#4a6741" opacity="0.6"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Citrus Blend Infused Oil</h3>
+        <p class="product-desc">Bright and uplifting. 1.0 fl oz. Energizes and brightens dull skin.</p>
+        <div class="product-footer">
+          <span class="product-price">$11.50</span>
+          <button class="product-add" aria-label="Inquire Citrus Blend Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Rose Infused Oil">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#3d1020" stroke="#d05078" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2d0818" stroke="#a03050"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(208,80,120,0.5)" stroke-width="1"/>
+    <circle cx="100" cy="108" r="10" fill="#d05078" opacity="0.4"/>
+    <ellipse cx="100" cy="100" rx="6" ry="9" fill="#d05078" opacity="0.5"/>
+    <ellipse cx="108" cy="106" rx="9" ry="6" fill="#c04068" opacity="0.4"/>
+    <ellipse cx="92" cy="106" rx="9" ry="6" fill="#c04068" opacity="0.4"/>
+    <ellipse cx="100" cy="116" rx="6" ry="9" fill="#c04068" opacity="0.35"/>
+    <circle cx="100" cy="108" r="3" fill="#f0d898" opacity="0.4"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Rose Infused Oil</h3>
+        <p class="product-desc">Romantic and regenerative. 1.0 fl oz. Deep skin nourishment and softening.</p>
+        <div class="product-footer">
+          <span class="product-price">$13.25</span>
+          <button class="product-add" aria-label="Inquire Rose Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Rosemary Infused Oil">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a2e1a" stroke="#4a6741" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2e4d30" stroke="#4a6741"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(74,103,65,0.6)" stroke-width="1"/>
+    <path d="M100 170 Q100 85 100 85" stroke="#7a9e72" stroke-width="1.5" fill="none"/>
+    <line x1="100" y1="92" x2="89" y2="88" stroke="#4a6741" stroke-width="1"/>
+    <line x1="100" y1="100" x2="111" y2="96" stroke="#4a6741" stroke-width="1"/>
+    <line x1="100" y1="108" x2="89" y2="104" stroke="#4a6741" stroke-width="1"/>
+    <line x1="100" y1="116" x2="111" y2="112" stroke="#4a6741" stroke-width="1"/>
+    <line x1="100" y1="124" x2="89" y2="120" stroke="#4a6741" stroke-width="1"/>
+    <circle cx="86" cy="88" r="2.5" fill="#6a9e62" opacity="0.7"/>
+    <circle cx="114" cy="96" r="2.5" fill="#6a9e62" opacity="0.7"/>
+    <circle cx="86" cy="104" r="2.5" fill="#6a9e62" opacity="0.7"/>
+    <circle cx="114" cy="112" r="2.5" fill="#6a9e62" opacity="0.7"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Rosemary Infused Oil</h3>
+        <p class="product-desc">Clarifying and stimulating. 1.0 fl oz. Supports hair growth and scalp health.</p>
+        <div class="product-footer">
+          <span class="product-price">$10.50</span>
+          <button class="product-add" aria-label="Inquire Rosemary Infused Oil">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="infused-oils" aria-label="Peppermint Spearmint Blend">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#0d2218" stroke="#3a9e72" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#1a3d30" stroke="#2a7e52"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(58,158,114,0.5)" stroke-width="1"/>
+    <path d="M93 160 Q93 90 93 90" stroke="#3a9e72" stroke-width="1.3" fill="none"/>
+    <ellipse cx="83" cy="103" rx="12" ry="7" transform="rotate(-15 83 103)" fill="#2e7a52" opacity="0.65"/>
+    <ellipse cx="105" cy="115" rx="12" ry="7" transform="rotate(15 105 115)" fill="#2e7a52" opacity="0.65"/>
+    <ellipse cx="85" cy="127" rx="11" ry="6" transform="rotate(-10 85 127)" fill="#2e7a52" opacity="0.5"/>
+    <circle cx="148" cy="85" r="3" fill="#3a9e72" opacity="0.4"/>
+    <circle cx="52" cy="115" r="2.5" fill="#3a9e72" opacity="0.3"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Infused Oils</p>
+        <h3 class="product-name">Peppermint Spearmint Blend</h3>
+        <p class="product-desc">Cool and invigorating. 1.0 fl oz. Headache relief and refreshing skin tonic.</p>
+        <div class="product-footer">
+          <span class="product-price">$12.50</span>
+          <button class="product-add" aria-label="Inquire Peppermint Spearmint Blend">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="soaps" aria-label="Cinnamon Oatmeal Delight">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="60" y="80" width="80" height="55" rx="8" fill="#5c3800" stroke="#c8973a" stroke-width="1.5"/>
+    <rect x="60" y="80" width="80" height="55" rx="8" fill="url(#soap1)" opacity="0.6"/>
+    <defs>
+      <linearGradient id="soap1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c8973a" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#5c3800" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <text x="100" y="112" text-anchor="middle" font-size="9" fill="#f0d898" opacity="0.7" font-family="serif" font-style="italic">Oatmeal</text>
+    <ellipse cx="80" cy="148" rx="18" ry="10" fill="#c8973a" opacity="0.25"/>
+    <ellipse cx="115" cy="152" rx="14" ry="8" fill="#c8973a" opacity="0.2"/>
+    <circle cx="55" cy="70" r="3" fill="#c8973a" opacity="0.4"/>
+    <circle cx="148" cy="65" r="2.5" fill="#c8973a" opacity="0.35"/>
+    <path d="M68 75 Q80 55 95 52 Q110 55 118 72" stroke="#4a6741" stroke-width="1" fill="none"/>
+    <ellipse cx="95" cy="50" rx="8" ry="5" fill="#4a6741" opacity="0.5"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Soaps &amp; Scrubs</p>
+        <h3 class="product-name">Cinnamon Oatmeal Delight</h3>
+        <p class="product-desc">Gently exfoliating bar soap. Soothing for sensitive and dry skin types.</p>
+        <div class="product-footer">
+          <span class="product-price">$10.00</span>
+          <button class="product-add" aria-label="Inquire Cinnamon Oatmeal Delight">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="soaps" aria-label="Vanilla Mocha Sugar Scrub">
+      <div class="product-image">
+        <span class="product-badge">New</span>
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M70 160 Q65 120 68 90 L132 90 Q135 120 130 160 Z" fill="#3d2b1a" stroke="#c8973a" stroke-width="1.5"/>
+    <ellipse cx="100" cy="90" rx="32" ry="10" fill="#2e1a0a" stroke="#c8973a" stroke-width="1"/>
+    <ellipse cx="100" cy="90" rx="28" ry="7" fill="#5c3800" opacity="0.7"/>
+    <circle cx="85" cy="110" r="2" fill="#f0d898" opacity="0.4"/>
+    <circle cx="98" cy="108" r="1.5" fill="#f0d898" opacity="0.35"/>
+    <circle cx="112" cy="112" r="2" fill="#f0d898" opacity="0.4"/>
+    <circle cx="90" cy="125" r="1.5" fill="#f0d898" opacity="0.3"/>
+    <circle cx="106" cy="128" r="2" fill="#f0d898" opacity="0.35"/>
+    <path d="M90 85 Q100 65 110 85" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
+    <ellipse cx="82" cy="62" rx="10" ry="6" transform="rotate(-20 82 62)" fill="#4a6741" opacity="0.5"/>
+    <ellipse cx="118" cy="62" rx="10" ry="6" transform="rotate(20 118 62)" fill="#4a6741" opacity="0.5"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Soaps &amp; Scrubs</p>
+        <h3 class="product-name">Vanilla Mocha Sugar Scrub</h3>
+        <p class="product-desc">Indulgent full-body exfoliant. Leaves skin silky-smooth with a warm, sweet scent.</p>
+        <div class="product-footer">
+          <span class="product-price">$10.00</span>
+          <button class="product-add" aria-label="Inquire Vanilla Mocha Sugar Scrub">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="lotions" aria-label="Herbal Botanical Body Lotion">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="80" y="65" width="40" height="105" rx="8" fill="#1e3320" stroke="#4a6741" stroke-width="1.5"/>
+    <rect x="84" y="50" width="32" height="20" rx="5" fill="#2e4d30" stroke="#4a6741"/>
+    <rect x="88" y="44" width="24" height="12" rx="3" fill="#4a6741"/>
+    <rect x="96" y="30" width="8" height="18" rx="2" fill="#2e4d30" stroke="#4a6741"/>
+    <rect x="88" y="28" width="24" height="6" rx="2" fill="#c8973a" opacity="0.8"/>
+    <rect x="85" y="85" width="30" height="40" rx="3" fill="none" stroke="rgba(200,151,58,0.4)" stroke-width="1"/>
+    <path d="M90 96 Q100 90 110 96 Q100 102 90 96Z" fill="#c8973a" opacity="0.3"/>
+    <line x1="90" y1="110" x2="110" y2="110" stroke="rgba(200,151,58,0.3)" stroke-width="0.75"/>
+    <line x1="90" y1="116" x2="105" y2="116" stroke="rgba(200,151,58,0.2)" stroke-width="0.75"/>
+    <circle cx="145" cy="95" r="3" fill="#c8973a" opacity="0.35"/>
+    <circle cx="55" cy="85" r="2.5" fill="#c8973a" opacity="0.3"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Lotions &amp; Creams</p>
+        <h3 class="product-name">Herbal Botanical Body Lotion</h3>
+        <p class="product-desc">Rich, fast-absorbing formula. Multi-herb infusion for all-day moisture and glow.</p>
+        <div class="product-footer">
+          <span class="product-price">$14.00</span>
+          <button class="product-add" aria-label="Inquire Herbal Botanical Body Lotion">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="lotions" aria-label="Natural Healing Body Cream">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M70 155 Q68 115 72 90 L128 90 Q132 115 130 155 Z" fill="#2e4d30" stroke="#7a9e72" stroke-width="1.5"/>
+    <ellipse cx="100" cy="90" rx="30" ry="9" fill="#1e3320" stroke="#7a9e72"/>
+    <ellipse cx="100" cy="90" rx="25" ry="6" fill="#4a6741" opacity="0.6"/>
+    <rect x="76" y="105" width="48" height="35" rx="3" fill="none" stroke="rgba(122,158,114,0.4)" stroke-width="1"/>
+    <path d="M85 122 Q100 116 115 122 Q100 128 85 122Z" fill="#7a9e72" opacity="0.25"/>
+    <circle cx="56" cy="110" r="3" fill="#7a9e72" opacity="0.4"/>
+    <circle cx="148" cy="100" r="2.5" fill="#7a9e72" opacity="0.3"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Lotions &amp; Creams</p>
+        <h3 class="product-name">Natural Healing Body Cream</h3>
+        <p class="product-desc">Dense, nourishing cream with healing herbs. Ideal for dry, cracked, or troubled skin.</p>
+        <div class="product-footer">
+          <span class="product-price">$15.00</span>
+          <button class="product-add" aria-label="Inquire Natural Healing Body Cream">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="body" aria-label="Botanical Body Spray">
+      <div class="product-image">
+
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="85" y="60" width="35" height="115" rx="10" fill="#1a2e1a" stroke="#4a6741" stroke-width="1.5"/>
+    <rect x="90" y="45" width="25" height="20" rx="5" fill="#2e4d30" stroke="#4a6741"/>
+    <path d="M110 42 L125 35 L130 40" stroke="#4a6741" stroke-width="1.5" fill="none"/>
+    <circle cx="130" cy="40" r="3" fill="#c8973a" opacity="0.7"/>
+    <circle cx="138" cy="32" r="1.5" fill="#7a9e72" opacity="0.4"/>
+    <circle cx="143" cy="28" r="1" fill="#7a9e72" opacity="0.3"/>
+    <circle cx="140" cy="36" r="1" fill="#7a9e72" opacity="0.3"/>
+    <circle cx="148" cy="34" r="1.5" fill="#7a9e72" opacity="0.25"/>
+    <rect x="90" y="90" width="30" height="35" rx="3" fill="none" stroke="rgba(200,151,58,0.4)" stroke-width="1"/>
+    <line x1="93" y1="100" x2="117" y2="100" stroke="rgba(200,151,58,0.35)" stroke-width="0.75"/>
+    <line x1="93" y1="108" x2="117" y2="108" stroke="rgba(200,151,58,0.25)" stroke-width="0.75"/>
+    <line x1="93" y1="115" x2="110" y2="115" stroke="rgba(200,151,58,0.2)" stroke-width="0.75"/>
+    <circle cx="55" cy="90" r="3" fill="#4a6741" opacity="0.4"/>
+    <circle cx="150" cy="75" r="2.5" fill="#4a6741" opacity="0.3"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Body Care</p>
+        <h3 class="product-name">Botanical Body Spray</h3>
+        <p class="product-desc">Light, refreshing herbal mist. Natural fragrance with skin-nourishing botanical extracts.</p>
+        <div class="product-footer">
+          <span class="product-price">$11.00</span>
+          <button class="product-add" aria-label="Inquire Botanical Body Spray">Inquire</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category="spiritual" aria-label="Spiritual Intention Blend">
+      <div class="product-image">
+        <span class="product-badge">Sacred</span>
+
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="65" y="70" width="70" height="100" rx="10" fill="#1a0f2e" stroke="#9b7fc0" stroke-width="1.5"/>
+    <rect x="75" y="55" width="50" height="20" rx="4" fill="#2a1a45" stroke="#7a5fa0"/>
+    <rect x="72" y="85" width="56" height="45" rx="3" fill="none" stroke="rgba(155,127,192,0.5)" stroke-width="1"/>
+    <circle cx="100" cy="108" r="14" stroke="#9b7fc0" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <path d="M100 94 L102 101 L109 101 L103 106 L105 113 L100 108 L95 113 L97 106 L91 101 L98 101 Z" fill="#c8973a" opacity="0.6"/>
+    <circle cx="82" cy="90" r="1.5" fill="#f0d898" opacity="0.6"/>
+    <circle cx="118" cy="88" r="1.5" fill="#f0d898" opacity="0.6"/>
+    <circle cx="78" cy="120" r="1" fill="#f0d898" opacity="0.4"/>
+    <circle cx="122" cy="122" r="1" fill="#f0d898" opacity="0.4"/>
+    <path d="M50 80 Q45 95 55 107 Q42 100 42 88 Q42 76 50 80Z" fill="#c8973a" opacity="0.35"/>
+    <circle cx="148" cy="85" r="5" stroke="#9b7fc0" stroke-width="0.8" fill="none" opacity="0.45"/>
+  </svg>
+
+      </div>
+      <div class="product-info">
+        <p class="product-category">Spiritual Blends</p>
+        <h3 class="product-name">Spiritual Intention Blend</h3>
+        <p class="product-desc">Custom-crafted anointing oil. Herbs chosen for your specific intentions and energy work.</p>
+        <div class="product-footer">
+          <span class="product-price">$16.00</span>
+          <button class="product-add" aria-label="Inquire Spiritual Intention Blend">Inquire</button>
+        </div>
+      </div>
+    </article>
+
   </div>
 
   <div style="text-align:center; margin-top: 3rem; position:relative; z-index:1;" class="reveal">
     <p style="font-family: var(--font-ui); font-size: 0.85rem; color: var(--sage); margin-bottom: 1.2rem; letter-spacing: 0.05em;">
-      {{ content.products.closing_note }}
+      All products are handmade in small batches · Availability varies · Contact to order
     </p>
-    <a href="{{ content.products.closing_cta_href }}" class="btn-outline">{{ content.products.closing_cta_label }}</a>
+    <a href="#footer" class="btn-outline">Get in Touch to Order</a>
   </div>
 </section>
 
@@ -527,44 +811,98 @@
 
   <div class="spiritual-inner">
     <div class="spiritual-text reveal">
-      <span class="section-label">{{ content.spiritual.section_label }}</span>
-      <h2>{{ content.spiritual.headline_prefix }} <em>{{ content.spiritual.headline_emphasis }}</em><br>{{ content.spiritual.headline_suffix }}</h2>
-      {% for paragraph in content.spiritual.paragraphs %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
+      <span class="section-label">Sacred Offerings</span>
+      <h2>Spiritual <em>Healing</em><br>&amp; Guidance</h2>
+
+      <p>Beyond her handcrafted botanical products, Cayamae offers a range of spiritual and intuitive services drawn from years of study, practice, and ancestral connection. Her gifts are deeply personal — each session is unique to the individual seeking guidance.</p>
+
+      <p>These are not commercial services. They are sacred exchanges between healer and seeker. Please reach out directly to discuss availability, offerings, and how she may be able to support your journey.</p>
+
 
       <div class="spiritual-services-list">
-        {% for service in content.spiritual.services %}
+
         <div class="spiritual-service-item">
-          {{ spiritual_icon(service.icon_key) }}
-          <span>{{ service.label }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 2 L13.4 8.6 L20 10 L13.4 11.4 L12 18 L10.6 11.4 L4 10 L10.6 8.6 Z"/>
+  </svg>
+
+          <span>Intuitive Reading &amp; Spiritual Guidance</span>
         </div>
-        {% endfor %}
+
+        <div class="spiritual-service-item">
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 6 L12 12 L16 14"/>
+  </svg>
+
+          <span>Herbal Remedy Consultations</span>
+        </div>
+
+        <div class="spiritual-service-item">
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 22 C6 22 3 16 3 12 C3 8 6 2 12 2 C18 2 21 8 21 12 C21 16 18 22 12 22 Z"/>
+    <path d="M12 7 L12 12 L15 15"/>
+  </svg>
+
+          <span>Custom Ritual &amp; Intention Blends</span>
+        </div>
+
+        <div class="spiritual-service-item">
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+  </svg>
+
+          <span>Energy Clearing &amp; Space Blessing</span>
+        </div>
+
+        <div class="spiritual-service-item">
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </svg>
+
+          <span>Ancestral Plant Wisdom Teachings</span>
+        </div>
+
       </div>
     </div>
 
     <div class="spiritual-contact-card reveal reveal-delay-2">
-      <span class="section-label">{{ content.spiritual.card_section_label }}</span>
-      <h3>{{ content.spiritual.card_title }}</h3>
-      <p>{{ content.spiritual.card_text }}</p>
+      <span class="section-label">Book a Session</span>
+      <h3>Reach Out Directly</h3>
+      <p>All spiritual services are offered through direct conversation. Please contact Cayamae to discuss your needs, her availability, and what form of service may best serve your path.</p>
 
       <div class="contact-methods">
         <div class="contact-method">
-          {{ contact_icon('phone') }}
-          <span>{{ content.site.phone }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-1.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </svg>
+
+          <span>(916) 613-0046</span>
         </div>
         <div class="contact-method">
-          {{ contact_icon('email') }}
-          <span>{{ content.site.email }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+  </svg>
+
+          <span>pleasuresenses@yahoo.com</span>
         </div>
       </div>
 
-      <a href="{{ content.spiritual.cta_href }}" class="btn-primary" style="width: 100%; text-align: center; display: block;">
-        {{ content.spiritual.cta_label }}
+      <a href="mailto:pleasuresenses@yahoo.com?subject=Spiritual%20Services%20Inquiry" class="btn-primary" style="width: 100%; text-align: center; display: block;">
+        Send a Message
       </a>
 
       <p style="margin-top: 1.2rem; font-size: 0.8rem; color: rgba(237,229,208,0.4); font-family: var(--font-ui); letter-spacing: 0.04em;">
-        {{ content.spiritual.note }}
+        Sacramento, CA · In-person &amp; distance sessions available
       </p>
     </div>
   </div>
@@ -572,13 +910,17 @@
 
 <section id="patreon" aria-label="Support her work on Patreon">
   <div class="patreon-inner">
-    <span class="section-label reveal" style="display:block; text-align:center;">{{ content.support.section_label }}</span>
-    <h2 class="reveal">{{ content.support.headline_prefix }} <em>{{ content.support.headline_emphasis }}</em><br>{{ content.support.headline_suffix }}</h2>
-    <p class="reveal">{{ content.support.paragraph }}</p>
+    <span class="section-label reveal" style="display:block; text-align:center;">Support the Garden</span>
+    <h2 class="reveal">Keep <em>Ancient Wisdom</em><br>Alive &amp; Growing</h2>
+    <p class="reveal">Cayamae&#39;s work is a labor of love — gathering wild herbs, crafting remedies, sharing knowledge passed down through generations. Your support on Patreon helps sustain her practice, expand her offerings, and keep this sacred knowledge accessible to those who need it most.</p>
     <div class="reveal">
-      <a href="{{ content.support.button_href }}" target="_blank" rel="noopener noreferrer" class="patreon-btn">
-        {{ social_icon('patreon') }}
-        {{ content.support.button_label }}
+      <a href="https://www.patreon.com/PLACEHOLDER_PATREON" target="_blank" rel="noopener noreferrer" class="patreon-btn">
+
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z"/>
+  </svg>
+
+        Support on Patreon
       </a>
     </div>
   </div>
@@ -586,83 +928,179 @@
 
 <section id="testimonials" aria-label="Customer testimonials">
   <div class="testimonials-header reveal">
-    <span class="section-label">{{ content.testimonials.section_label }}</span>
-    <h2>{{ content.testimonials.headline_prefix }} <em>{{ content.testimonials.headline_emphasis }}</em></h2>
+    <span class="section-label">Community Voices</span>
+    <h2>Words from the <em>Garden</em></h2>
   </div>
   <div class="testimonials-grid">
-    {% for testimonial in content.testimonials['items'] %}
-    <div class="testimonial-card reveal{% if loop.index > 1 %} reveal-delay-{{ loop.index - 1 }}{% endif %}">
-      <p>{{ testimonial.quote }}</p>
+
+    <div class="testimonial-card reveal">
+      <p>The lavender infused oil changed my sleep completely. I&#39;ve tried so many things over the years — nothing has worked like this. You can feel the intention in every bottle.</p>
       <div class="testimonial-author">
-        <div class="author-avatar">{{ testimonial_avatar() }}</div>
+        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg></div>
         <div>
-          <p class="author-name">{{ testimonial.name }}</p>
-          <p class="author-location">{{ testimonial.location }}</p>
+          <p class="author-name">M. Williams</p>
+          <p class="author-location">Sacramento, CA</p>
         </div>
       </div>
     </div>
-    {% endfor %}
+
+    <div class="testimonial-card reveal reveal-delay-1">
+      <p>I came to her for a spiritual reading not knowing what to expect. She saw things no one else could have known. I left feeling lighter than I have in years. A true gift.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg></div>
+        <div>
+          <p class="author-name">D. Carter</p>
+          <p class="author-location">Oakland, CA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-2">
+      <p>The cinnamon oatmeal soap is unlike anything at the store. My skin has never felt this healthy. I&#39;ve been ordering her products for over a year now and every batch is perfect.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg></div>
+        <div>
+          <p class="author-name">T. Johnson</p>
+          <p class="author-location">Elk Grove, CA</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <footer id="footer" aria-label="Site footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <span class="nav-logo-main">{{ content.site.brand_name }}</span>
-      <span class="nav-logo-sub" style="display:block; margin-bottom:1rem;">{{ content.site.brand_tagline }}</span>
-      <p>{{ content.footer.brand_blurb }}</p>
+      <span class="nav-logo-main">Cayamae&#39;s Ancient Garden</span>
+      <span class="nav-logo-sub" style="display:block; margin-bottom:1rem;">Plant Wisdom · Sacred Craft</span>
+      <p>Handcrafted herbal products and spiritual wellness services rooted in ancient plant wisdom. Made with love in Sacramento, California.</p>
     </div>
 
     <div class="footer-col">
-      <h4>{{ content.footer.shop_heading }}</h4>
+      <h4>Shop</h4>
       <ul>
-        {% for link in content.footer.shop_links %}
+
         <li>
-          <a href="{{ link.href }}"{% if link.filter_id %} data-set-filter="{{ link.filter_id }}"{% endif %}>{{ link.label }}</a>
+          <a href="#products">All Products</a>
         </li>
-        {% endfor %}
+
+        <li>
+          <a href="#products" data-set-filter="infused-oils">Infused Oils</a>
+        </li>
+
+        <li>
+          <a href="#products" data-set-filter="lotions">Lotions &amp; Creams</a>
+        </li>
+
+        <li>
+          <a href="#products" data-set-filter="soaps">Soaps &amp; Scrubs</a>
+        </li>
+
+        <li>
+          <a href="#products" data-set-filter="spiritual">Spiritual Blends</a>
+        </li>
+
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>{{ content.footer.garden_heading }}</h4>
+      <h4>Garden</h4>
       <ul>
-        {% for link in content.footer.garden_links %}
+
         <li>
-          <a href="{{ link.href }}"{% if link.new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+          <a href="#philosophy">Our Story</a>
         </li>
-        {% endfor %}
+
+        <li>
+          <a href="#spiritual">Spiritual Services</a>
+        </li>
+
+        <li>
+          <a href="#testimonials">Community</a>
+        </li>
+
+        <li>
+          <a href="https://www.patreon.com/PLACEHOLDER_PATREON" target="_blank" rel="noopener noreferrer">Support on Patreon</a>
+        </li>
+
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>{{ content.footer.contact_heading }}</h4>
+      <h4>Contact</h4>
       <div class="footer-contact-item">
-        {{ contact_icon('phone') }}
-        <span>{{ content.site.phone }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-1.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </svg>
+
+        <span>(916) 613-0046</span>
       </div>
       <div class="footer-contact-item">
-        {{ contact_icon('email') }}
-        <span>{{ content.site.email }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+  </svg>
+
+        <span>pleasuresenses@yahoo.com</span>
       </div>
       <div class="footer-contact-item">
-        {{ contact_icon('location') }}
-        <span>{{ content.site.address_line }}</span>
+
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+
+        <span>Sacramento, CA 95877</span>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© {{ current_year }} {{ content.footer.copyright_text }}</p>
+    <p>© 2026 Cayamae&#39;s Ancient Garden · All rights reserved · Handcrafted with love in Sacramento, CA</p>
     <div class="footer-social" aria-label="Social media links">
-      {% for link in content.footer.social_links %}
-      <a href="{{ link.url }}"
-         aria-label="{{ link.label }}"
-         title="{{ link.platform | capitalize }}"
-         {% if link.url[:4] == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
-        {{ social_icon(link.platform) }}
+
+      <a href="#"
+         aria-label="Visit our Etsy shop"
+         title="Etsy"
+         >
+
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M10 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-5h4v-2h-4v-4h5V7h-5V4a1 1 0 0 0-1-1z"/>
+  </svg>
+
       </a>
-      {% endfor %}
+
+      <a href="https://www.patreon.com/PLACEHOLDER_PATREON"
+         aria-label="Support on Patreon"
+         title="Patreon"
+         target="_blank" rel="noopener noreferrer">
+
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z"/>
+  </svg>
+
+      </a>
+
+      <a href="#"
+         aria-label="Facebook"
+         title="Facebook"
+         >
+
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg>
+
+      </a>
+
     </div>
   </div>
 </footer>

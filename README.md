@@ -1,77 +1,46 @@
-# Cayamae's Ancient Garden — Website v1.0
-## Site Structure
+# Cayamae's Ancient Garden
 
-```
-cayamaes_garden/
-├── index.html          ← Main page (all content lives here)
-├── css/
-│   └── style.css       ← All styles & color variables
-├── js/
-│   └── main.js         ← Navigation, filter, scroll behavior
-├── images/             ← Drop product photos here (see below)
-└── README.md           ← This file
-```
+This version keeps the site's copy and catalog in `content.json`, while publishing a normal static `index.html` that GitHub Pages can serve.
 
----
+## Publish an update
 
-## Quick-Swap Guide
+1. Install the dependency: `pip install -r requirements.txt`
+2. Start the local editor: `python server.py`
+3. Open <http://localhost:5050/admin.html> and sign in.
+4. Save your changes. The server updates both `content.json` and the generated `index.html`.
+5. Commit and push both changed files to GitHub.
 
-### Change Color Theme
-All colors are CSS variables at the top of `css/style.css`:
-```css
-:root {
-  --forest:   #1e3320;   /* main dark green */
-  --gold:     #c8973a;   /* accent gold */
-  --cream:    #f5f0e6;   /* light bg */
-  /* ... etc */
-}
+The default local credentials are `admin` / `change-me`. Set `CAG_ADMIN_USERNAME`, `CAG_ADMIN_PASSWORD`, and `CAG_SECRET_KEY` before using the editor on any public server. The editor is a local Flask tool; GitHub Pages only hosts the generated public site.
+
+You can also edit `content.json` directly and run:
+
+```powershell
+python build.py
 ```
 
-### Update Contact Info
-Search `index.html` for:
-- `(916) 613-0046` → replace with new phone
-- `pleasuresenses@yahoo.com` → replace with new email
-- `Sacramento, CA 95877` → replace with address
+That command regenerates `index.html`, `sitemap.xml`, and `robots.txt`.
 
-### Set the Patreon URL
-Search `index.html` for `PLACEHOLDER_PATREON` (appears 4 times) and replace with the actual Patreon username.
+## Project structure
 
-### Add Product Photos
-1. Drop the image file into `images/` (e.g. `images/lavender-oil.jpg`)
-2. In `index.html`, find the product's `<div class="product-image">` block
-3. Replace the `<svg>...</svg>` inside it with:
-   ```html
-   <img src="images/lavender-oil.jpg" alt="Lavender Infused Oil" style="width:100%;height:100%;object-fit:cover;" />
-   ```
+```text
+content.json        Editable site copy, products, links, and SEO
+site_template.html  Jinja source template
+index.html          Generated static page published by GitHub Pages
+admin.html          Local editing interface
+server.py           Local preview and editing server
+build.py            Static-site build command
+css/style.css       Site styling
+js/main.js          Navigation, filters, and scroll behavior
+```
 
-### Add a New Product
-Copy any existing `<article class="product-card" ...>` block and paste it inside `<div class="products-grid" id="productsGrid">`.
+Do not edit generated `index.html` by hand. Make content changes in `content.json` or layout changes in `site_template.html`, then run `python build.py`.
 
-Update:
-- `data-category` attribute: `infused-oils` | `lotions` | `soaps` | `body` | `spiritual`
-- `aria-label` on the article
-- Product category, name, description, price text
-- Replace the SVG art or add an `<img>` tag
+## Product photos
 
-### Update Testimonials
-Each testimonial is a `<div class="testimonial-card">` inside `#testimonials`. Edit the `<p>` text, name, and location.
-
----
-
-## Sections (in order)
-1. **Hero** — Full-screen welcome with CTA buttons
-2. **Philosophy** — Story/about with botanical art
-3. **Products** — 14 product cards with category filter
-4. **Spiritual Services** — Contact-gated, no booking engine
-5. **Patreon** — Donation/support section
-6. **Testimonials** — 3 placeholder reviews
-7. **Footer** — Contact info, links, socials
-
----
+Place product images in `images/`. The current template uses built-in SVG artwork; to use uploaded photos, update the corresponding product-art markup in `site_template.html`, then rebuild.
 
 ## Notes
-- No dependencies. Pure HTML/CSS/JS. Works offline.
-- Fonts load from Google Fonts (requires internet).
-- Products currently use "Inquire" buttons — no cart logic yet.
-- All product toast notifications are cosmetic placeholders.
-- Etsy and Facebook links in footer are `#` placeholders.
+
+- Fonts load from Google Fonts and require internet access.
+- Product inquiry buttons currently show a confirmation message; there is no shopping cart.
+- Patreon, Etsy, and Facebook links still contain placeholders in `content.json` and should be replaced before launch.

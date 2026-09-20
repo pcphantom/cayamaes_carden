@@ -45,6 +45,8 @@ CONFIG = {
 BASE_DIR = Path(__file__).parent
 CONTENT_FILE = BASE_DIR / "content.json"
 CONTENT_BACKUP_DIR = BASE_DIR / "content_backups"
+SITE_TEMPLATE = "site_template.html"
+STATIC_INDEX_FILE = BASE_DIR / "index.html"
 TOP_LEVEL_KEYS = (
     "site",
     "nav",
@@ -189,19 +191,40 @@ def build_schema_json(content: dict, base_url: str) -> str:
     return json.dumps(payload, indent=2, ensure_ascii=False)
 
 
+def render_site(content: dict, base_url: str, current_year: int | None = None) -> str:
+    """Render the editable content into the complete public website."""
+    return render_template(
+        SITE_TEMPLATE,
+        content=content,
+        base_url=base_url,
+        schema_json=build_schema_json(content, base_url),
+        current_year=current_year or datetime.now().year,
+    )
+
+
+def write_static_site(content: dict | None = None) -> Path:
+    """Generate the plain HTML file served by GitHub Pages."""
+    content = content or load_content()
+    base_url = str(content.get("seo", {}).get("canonical_url", "")).strip().rstrip("/")
+    if not base_url:
+        raise ValueError("seo.canonical_url must be set before building the static site.")
+
+    with app.app_context():
+        rendered = render_site(content, base_url)
+
+    rendered = "\n".join(line.rstrip() for line in rendered.splitlines()) + "\n"
+    temporary_file = STATIC_INDEX_FILE.with_suffix(".html.tmp")
+    temporary_file.write_bytes(rendered.encode("utf-8"))
+    temporary_file.replace(STATIC_INDEX_FILE)
+    return STATIC_INDEX_FILE
+
+
 @app.route("/")
 @app.route("/index.html")
 def index():
     content = load_content()
     base_url = resolve_base_url(content)
-    schema_json = build_schema_json(content, base_url)
-    return render_template(
-        "index.html",
-        content=content,
-        base_url=base_url,
-        schema_json=schema_json,
-        current_year=datetime.now().year,
-    )
+    return render_site(content, base_url)
 
 
 @app.route("/admin")
@@ -253,6 +276,7 @@ def admin_save():
 
     try:
         save_content_file(data)
+        write_static_site(data)
     except Exception as exc:
         app.logger.error("Save failed: %s", exc)
         return jsonify({"error": "Save failed"}), 500
