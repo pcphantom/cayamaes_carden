@@ -35,19 +35,19 @@
         "label": "Infused Oils"
       },
       {
-        "filter_id": "lotions",
+        "filter_id": "balms",
         "href": "#products",
-        "label": "Lotions & Creams"
+        "label": "Balms & Salves"
       },
       {
-        "filter_id": "soaps",
+        "filter_id": "body",
         "href": "#products",
-        "label": "Soaps & Scrubs"
+        "label": "Soap, Scrub & Body"
       },
       {
-        "filter_id": "spiritual",
+        "filter_id": "hair",
         "href": "#products",
-        "label": "Spiritual Blends"
+        "label": "Hair & Scalp"
       }
     ],
     "social_links": [
@@ -111,39 +111,39 @@
     ]
   },
   "philosophy": {
-    "headline_emphasis": "Uniqueness",
-    "headline_prefix": "Creating for Your",
-    "headline_suffix": "Each Day",
+    "headline_emphasis": "The Old Way",
+    "headline_prefix": "Made",
+    "headline_suffix": "In Sacramento",
     "paragraphs": [
-      "Cayamae's Ancient Garden was born from a deep reverence for the healing power of plants and a calling to share that wisdom. Every product is made by hand in small batches, drawing on traditional plant knowledge passed down through generations and refined through years of practice.",
-      "We believe your body deserves ingredients you can pronounce — wild-harvested herbs, cold-pressed oils, and botanicals gathered with care and intention. Nothing synthetic. Nothing mass-produced. Everything made just for you."
+      "Nothing here was bought in. The herbs are wild harvested by hand from the land around Sacramento, cut fresh so the aroma and character of the plant are still in the leaf when the infusion begins.",
+      "Every oil is warm infused and then cold infused, four to six times over, with fresh plant material each round. It is slow work, and it is how this much plant finds its way into a bottle this small."
     ],
     "pillars": [
       {
-        "description": "Botanicals gathered from nature, never factory-farmed",
+        "description": "Gathered from nature, never farmed or bought in",
         "title": "Wild-Harvested"
       },
       {
-        "description": "Made with intention; every batch receives full attention",
+        "description": "Cut, pressed, strained, and bottled by hand",
+        "title": "Hand Tools Only"
+      },
+      {
+        "description": "Fresh plant material, four to six full rounds",
+        "title": "4X to 6X Infused"
+      },
+      {
+        "description": "Made to order, a few bottles at a time",
         "title": "Small Batch"
-      },
-      {
-        "description": "Rooted in traditional plant medicine and herbalism",
-        "title": "Ancient Wisdom"
-      },
-      {
-        "description": "Custom formulas — one size does not fit all",
-        "title": "For All Bodies"
       }
     ],
     "quote_attribution": "Cayamae's Ancient Garden",
     "quote_text": "One size does not fit all — our formulas are created to bring you closer to nature.",
-    "section_label": "Our Story & Philosophy"
+    "section_label": "Her Craft"
   },
   "products": {
     "closing_cta_href": "#footer",
     "closing_cta_label": "Get in Touch to Order",
-    "closing_note": "All products are handmade in small batches · Availability varies · Contact to order",
+    "closing_note": "Made to order in small batches · Any three 1 oz oils $60 · Availability follows the harvest",
     "filters": [
       {
         "id": "all",
@@ -154,167 +154,286 @@
         "label": "Infused Oils"
       },
       {
-        "id": "lotions",
-        "label": "Lotions & Creams"
+        "id": "balms",
+        "label": "Balms & Salves"
       },
       {
-        "id": "soaps",
-        "label": "Soaps & Scrubs"
+        "id": "hair",
+        "label": "Hair & Scalp"
       },
       {
         "id": "body",
-        "label": "Body Care"
+        "label": "Soap, Scrub & Body"
       },
       {
         "id": "spiritual",
-        "label": "Spiritual Blends"
+        "label": "Sacred Offerings"
       }
     ],
-    "headline_emphasis": "Natural",
-    "headline_prefix": "Handcrafted",
-    "headline_suffix": "Products",
-    "intro": "Every item is made by hand in small batches using wild-harvested and ethically sourced botanicals. Products are available while supply lasts.",
+    "headline_emphasis": "The Old Way",
+    "headline_prefix": "Made",
+    "headline_suffix": "By Hand",
+    "intro": "Nothing here was bought in. Cayamae gathers, infuses, pours, and labels every small batch by hand in Sacramento. Prices and availability follow the season and the harvest.",
     "item_cta_label": "Inquire",
     "items": [
       {
         "badge": "Bestseller",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Warming, grounding blend. 1.0 fl oz. Supports circulation and skin nourishment.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Warm baking spice. Grounding, for cold weather.",
         "id": "cinnamon-infused-oil",
+        "image": "images/products/cinnamon-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Cinnamon Infused Oil",
+        "image_height": 900,
         "image_key": "cinnamon_oil",
+        "image_width": 506,
         "name": "Cinnamon Infused Oil",
-        "price": "$11.75"
+        "price": "$22"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Energizing blend with natural antioxidants. 1.0 fl oz. Great for skin brightening.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Roasted bean over cocoa and vanilla. Comforting.",
         "id": "coffee-infused-oil",
+        "image": "images/products/coffee-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Coffee Infused Oil",
+        "image_height": 900,
         "image_key": "coffee_oil",
+        "image_width": 506,
         "name": "Coffee Infused Oil",
-        "price": "$10.50"
+        "price": "$22"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Purifying and clarifying. 1.0 fl oz. Respiratory support and mental clarity.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Sharp and bracing. Good across shoulders and back.",
         "id": "eucalyptus-infused-oil",
+        "image": "images/products/eucalyptus-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Eucalyptus Infused Oil",
+        "image_height": 900,
         "image_key": "eucalyptus_oil",
+        "image_width": 506,
         "name": "Eucalyptus Infused Oil",
-        "price": "$10.50"
+        "price": "$22"
       },
       {
         "badge": "Popular",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Calming and restorative. 1.0 fl oz. Promotes relaxation and restful sleep.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Soft floral, green finish. For after-bath skin.",
         "id": "lavender-infused-oil",
+        "image": "images/products/lavender-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Lavender Infused Oil",
+        "image_height": 900,
         "image_key": "lavender_oil",
+        "image_width": 506,
         "name": "Lavender Infused Oil",
-        "price": "$12.00"
+        "price": "$22"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Bright and uplifting. 1.0 fl oz. Energizes and brightens dull skin.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Orange, lemon and lime peel. Sunny and lifting.",
         "id": "citrus-blend-infused-oil",
+        "image": "images/products/citrus-blend-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Citrus Blend Infused Oil",
+        "image_height": 900,
         "image_key": "citrus_oil",
+        "image_width": 506,
         "name": "Citrus Blend Infused Oil",
-        "price": "$11.50"
+        "price": "$22"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Romantic and regenerative. 1.0 fl oz. Deep skin nourishment and softening.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 5X infused. Whole rose buds drawn slowly. Lush and soft.",
         "id": "rose-infused-oil",
+        "image": "images/products/rose-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Rose Infused Oil",
+        "image_height": 900,
         "image_key": "rose_oil",
+        "image_width": 506,
         "name": "Rose Infused Oil",
-        "price": "$13.25"
+        "price": "$28"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Clarifying and stimulating. 1.0 fl oz. Supports hair growth and scalp health.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 5X infused. Deep and resinous. A classic for scalp massage.",
         "id": "rosemary-infused-oil",
+        "image": "images/products/rosemary-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Rosemary Infused Oil",
+        "image_height": 900,
         "image_key": "rosemary_oil",
+        "image_width": 506,
         "name": "Rosemary Infused Oil",
-        "price": "$10.50"
+        "price": "$24"
       },
       {
         "badge": "",
         "category_id": "infused-oils",
-        "category_label": "Infused Oils",
-        "description": "Cool and invigorating. 1.0 fl oz. Headache relief and refreshing skin tonic.",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. Cool bright mint. A finish for tired feet and legs.",
         "id": "peppermint-spearmint-blend",
+        "image": "images/products/peppermint-spearmint-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Peppermint and Spearmint Infused Oil",
+        "image_height": 900,
         "image_key": "peppermint_oil",
-        "name": "Peppermint Spearmint Blend",
-        "price": "$12.50"
+        "image_width": 506,
+        "name": "Peppermint & Spearmint",
+        "price": "$22"
       },
       {
         "badge": "",
-        "category_id": "soaps",
-        "category_label": "Soaps & Scrubs",
-        "description": "Gently exfoliating bar soap. Soothing for sensitive and dry skin types.",
-        "id": "cinnamon-oatmeal-delight",
-        "image_key": "cinnamon_soap",
-        "name": "Cinnamon Oatmeal Delight",
-        "price": "$10.00"
+        "category_id": "infused-oils",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 5X infused. Green citrus with a keen edge. Wakes the skin up.",
+        "id": "lemongrass-infused-oil",
+        "image": "images/products/lemongrass-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Lemongrass Infused Oil",
+        "image_height": 900,
+        "image_key": "lemongrass_oil",
+        "image_width": 506,
+        "name": "Lemongrass Infused Oil",
+        "price": "$24"
       },
       {
-        "badge": "New",
-        "category_id": "soaps",
-        "category_label": "Soaps & Scrubs",
-        "description": "Indulgent full-body exfoliant. Leaves skin silky-smooth with a warm, sweet scent.",
-        "id": "vanilla-mocha-sugar-scrub",
-        "image_key": "mocha_scrub",
-        "name": "Vanilla Mocha Sugar Scrub",
-        "price": "$10.00"
+        "badge": "6X",
+        "category_id": "infused-oils",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 6X infused. Mint and wintergreen over willow. Her strongest.",
+        "id": "white-willow-infused-oil",
+        "image": "images/products/white-willow-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's White Willow Infused Oil",
+        "image_height": 900,
+        "image_key": "white_willow_oil",
+        "image_width": 506,
+        "name": "White Willow Infused Oil",
+        "price": "$26"
       },
       {
-        "badge": "",
-        "category_id": "lotions",
-        "category_label": "Lotions & Creams",
-        "description": "Rich, fast-absorbing formula. Multi-herb infusion for all-day moisture and glow.",
-        "id": "herbal-botanical-body-lotion",
-        "image_key": "body_lotion",
-        "name": "Herbal Botanical Body Lotion",
-        "price": "$14.00"
+        "badge": "Seasonal",
+        "category_id": "infused-oils",
+        "category_label": "Infused Botanical Oils",
+        "description": "1 fl oz · 4X infused. A traditional mint-family preparation made in small seasonal batches.",
+        "id": "pennyroyal-infused-oil",
+        "image": "images/products/pennyroyal-infused-oil.webp",
+        "image_alt": "Bottle of Cayamae's Pennyroyal Infused Oil",
+        "image_height": 900,
+        "image_key": "pennyroyal_oil",
+        "image_width": 506,
+        "name": "Pennyroyal Infused Oil",
+        "price": "Ask"
       },
       {
-        "badge": "",
-        "category_id": "lotions",
-        "category_label": "Lotions & Creams",
-        "description": "Dense, nourishing cream with healing herbs. Ideal for dry, cracked, or troubled skin.",
-        "id": "natural-healing-body-cream",
-        "image_key": "body_cream",
-        "name": "Natural Healing Body Cream",
-        "price": "$15.00"
+        "badge": "Slow Work",
+        "category_id": "balms",
+        "category_label": "Balms & Salves",
+        "description": "1 fl oz. Close to forty botanicals. Earthy, concentrated, and very rich.",
+        "id": "circle-garden-complete",
+        "image": "images/products/circle-garden-complete.webp",
+        "image_alt": "Open jars of Cayamae's Circle Garden Complete herbal balm",
+        "image_height": 506,
+        "image_key": "circle_garden_complete",
+        "image_layout": "landscape",
+        "image_width": 900,
+        "name": "Circle Garden Complete",
+        "price": "$38"
+      },
+      {
+        "badge": "Slow Work",
+        "category_id": "balms",
+        "category_label": "Balms & Salves",
+        "description": "1 fl oz. Nineteen herbs. Warm, resinous, and long lasting.",
+        "id": "st-johns-wort-blend",
+        "image": "images/products/st-johns-wort-blend.webp",
+        "image_alt": "Open jars of Cayamae's St. John's Wort herbal blend",
+        "image_height": 506,
+        "image_key": "st_johns_wort_blend",
+        "image_layout": "landscape",
+        "image_width": 900,
+        "name": "St. John's Wort Blend",
+        "price": "$34"
+      },
+      {
+        "badge": "For Hair",
+        "category_id": "hair",
+        "category_label": "Hair & Scalp",
+        "description": "1 oz / 2 oz. Rosemary, sage, lavender, and horsetail.",
+        "id": "herbal-hair-scalp-oil",
+        "image": "images/products/herbal-hair-scalp-oil.webp",
+        "image_alt": "Cayamae's Herbal Hair and Scalp Oil jars",
+        "image_height": 506,
+        "image_key": "herbal_hair_oil",
+        "image_layout": "landscape",
+        "image_width": 900,
+        "name": "Herbal Hair & Scalp Oil",
+        "price": "$24 / $38"
       },
       {
         "badge": "",
         "category_id": "body",
-        "category_label": "Body Care",
-        "description": "Light, refreshing herbal mist. Natural fragrance with skin-nourishing botanical extracts.",
+        "category_label": "Soap, Scrub & Body",
+        "description": "Bar. Ground oats and warm spice. Gentle every day.",
+        "id": "cinnamon-oatmeal-delight",
+        "image_key": "cinnamon_soap",
+        "name": "Cinnamon Oatmeal Soap",
+        "price": "$12"
+      },
+      {
+        "badge": "New",
+        "category_id": "body",
+        "category_label": "Soap, Scrub & Body",
+        "description": "8 oz. Sugar, coffee, and vanilla. Polishes, then feeds.",
+        "id": "vanilla-mocha-sugar-scrub",
+        "image_key": "mocha_scrub",
+        "name": "Vanilla Mocha Sugar Scrub",
+        "price": "$22"
+      },
+      {
+        "badge": "",
+        "category_id": "body",
+        "category_label": "Soap, Scrub & Body",
+        "description": "4 oz. Multi-herb infusion in a light cream. No film.",
+        "id": "herbal-botanical-body-lotion",
+        "image_key": "body_lotion",
+        "name": "Herbal Botanical Lotion",
+        "price": "$26"
+      },
+      {
+        "badge": "",
+        "category_id": "body",
+        "category_label": "Soap, Scrub & Body",
+        "description": "4 oz. Thick with cocoa butter. For rough, dry skin.",
+        "id": "natural-healing-body-cream",
+        "image_key": "body_cream",
+        "name": "Deep Nourishing Cream",
+        "price": "$28"
+      },
+      {
+        "badge": "",
+        "category_id": "body",
+        "category_label": "Soap, Scrub & Body",
+        "description": "4 oz. A light herbal veil. Nothing synthetic in it.",
         "id": "botanical-body-spray",
         "image_key": "body_spray",
-        "name": "Botanical Body Spray",
-        "price": "$11.00"
+        "name": "Botanical Body Mist",
+        "price": "$18"
       },
       {
         "badge": "Sacred",
         "category_id": "spiritual",
         "category_label": "Spiritual Blends",
-        "description": "Custom-crafted anointing oil. Herbs chosen for your specific intentions and energy work.",
+        "description": "1 fl oz. Herbs chosen with you and blended for your intention.",
         "id": "spiritual-intention-blend",
         "image_key": "spiritual_blend",
-        "name": "Spiritual Intention Blend",
-        "price": "$16.00"
+        "name": "Custom Anointing Oil",
+        "price": "$30"
       }
     ],
     "section_label": "The Apothecary"
@@ -353,7 +472,7 @@
     ],
     "google_site_verification": "",
     "keywords": "herbal apothecary Sacramento, handcrafted infused oils, natural soap Sacramento, spiritual wellness Sacramento, herbal remedies California, custom ritual blends, spiritual guidance Sacramento",
-    "og_image": "",
+    "og_image": "https://pcphantom.github.io/cayamaes_carden/images/products/lavender-infused-oil.webp",
     "postal_code": "95877",
     "robots": "index, follow",
     "same_as": [
@@ -362,7 +481,7 @@
     "schema_type": "Organization",
     "title": "Cayamae's Ancient Garden | Herbal Apothecary & Spiritual Wellness",
     "twitter_card": "summary_large_image",
-    "twitter_image": "",
+    "twitter_image": "https://pcphantom.github.io/cayamaes_carden/images/products/lavender-infused-oil.webp",
     "twitter_site": ""
   },
   "site": {

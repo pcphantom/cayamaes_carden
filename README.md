@@ -37,7 +37,9 @@ Do not edit generated `index.html` by hand. Make content changes in `content.jso
 
 ## Product photos
 
-Place product images in `images/`. The current template uses built-in SVG artwork; to use uploaded photos, update the corresponding product-art markup in `site_template.html`, then rebuild.
+Optimized product photos live in `images/products/`. The originals remain in their individual product folders outside this website repository.
+
+Each photographed product in `content.json` has `image`, `image_alt`, `image_width`, and `image_height` fields. New photos should be converted to WebP, resized to no more than 900 pixels on the longest side, placed in `images/products/`, and referenced through those fields. Products without a photo continue to use their built-in botanical artwork.
 
 ## Notes
 

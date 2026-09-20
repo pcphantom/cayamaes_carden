@@ -408,38 +408,23 @@
 <section id="philosophy" aria-label="Our Philosophy">
   <div class="philosophy-inner">
     <div class="philosophy-visual reveal">
-      <svg class="philosophy-art" viewBox="0 0 380 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="120" y="180" width="140" height="190" rx="18" fill="#2e4d30" stroke="#4a6741" stroke-width="1.5"/>
-        <rect x="145" y="160" width="90" height="30" rx="6" fill="#1e3320" stroke="#4a6741" stroke-width="1"/>
-        <rect x="155" y="145" width="70" height="20" rx="4" fill="#c8973a" opacity="0.8"/>
-        <rect x="130" y="210" width="120" height="80" rx="4" fill="rgba(200,151,58,0.1)" stroke="rgba(200,151,58,0.35)" stroke-width="1"/>
-        <line x1="145" y1="230" x2="235" y2="230" stroke="rgba(200,151,58,0.4)" stroke-width="0.75"/>
-        <line x1="145" y1="245" x2="235" y2="245" stroke="rgba(200,151,58,0.3)" stroke-width="0.75"/>
-        <line x1="145" y1="258" x2="210" y2="258" stroke="rgba(200,151,58,0.25)" stroke-width="0.75"/>
-        <path d="M175 350 Q178 310 182 270" stroke="#7a9e72" stroke-width="1.5" fill="none"/>
-        <ellipse cx="170" cy="290" rx="14" ry="8" transform="rotate(-25 170 290)" fill="#4a6741" opacity="0.7"/>
-        <ellipse cx="190" cy="275" rx="14" ry="8" transform="rotate(20 190 275)" fill="#4a6741" opacity="0.6"/>
-        <path d="M205 350 Q200 310 196 265" stroke="#7a9e72" stroke-width="1.5" fill="none"/>
-        <ellipse cx="213" cy="295" rx="13" ry="7" transform="rotate(30 213 295)" fill="#4a6741" opacity="0.6"/>
-        <ellipse cx="196" cy="280" rx="12" ry="7" transform="rotate(-15 196 280)" fill="#4a6741" opacity="0.5"/>
-        <circle cx="90" cy="220" r="8" fill="#c8973a" opacity="0.6"/>
-        <circle cx="78" cy="210" r="5" fill="#e2b86a" opacity="0.4"/>
-        <circle cx="105" cy="212" r="5" fill="#e2b86a" opacity="0.4"/>
-        <circle cx="90" cy="200" r="5" fill="#e2b86a" opacity="0.4"/>
-        <circle cx="82" cy="230" r="5" fill="#e2b86a" opacity="0.4"/>
-        <path d="M90 235 Q88 260 85 280" stroke="#7a9e72" stroke-width="1.2" fill="none"/>
-        <rect x="55" y="300" width="80" height="100" rx="10" fill="#1e3320" stroke="#4a6741" stroke-width="1" opacity="0.85"/>
-        <rect x="70" y="288" width="50" height="18" rx="4" fill="#c8973a" opacity="0.6"/>
-        <circle cx="310" cy="80" r="45" stroke="#c8973a" stroke-width="1" fill="none" opacity="0.25"/>
-        <circle cx="310" cy="80" r="35" stroke="#c8973a" stroke-width="0.5" fill="none" opacity="0.15"/>
-        <circle cx="310" cy="80" r="12" fill="#c8973a" opacity="0.2"/>
-        <circle cx="50" cy="80" r="2" fill="#c8973a" opacity="0.5"/>
-        <circle cx="340" cy="200" r="1.5" fill="#c8973a" opacity="0.4"/>
-        <circle cx="30" cy="350" r="2" fill="#c8973a" opacity="0.35"/>
-        <path d="M260 370 Q280 320 295 270 Q305 230 290 200" stroke="#4a6741" stroke-width="1.2" fill="none"/>
-        <ellipse cx="302" cy="228" rx="16" ry="9" transform="rotate(25 302 228)" fill="#4a6741" opacity="0.5"/>
-        <ellipse cx="280" cy="310" rx="14" ry="8" transform="rotate(-20 280 310)" fill="#4a6741" opacity="0.4"/>
-      </svg>
+      <div class="brochure-photo-collage" aria-label="Handcrafted products from Cayamae's Ancient Garden">
+        <img class="brochure-photo-main"
+             src="images/products/lavender-infused-oil.webp"
+             alt="Bottle of Cayamae's Lavender Infused Oil"
+             width="506"
+             height="900"
+             loading="lazy"
+             decoding="async" />
+        <img class="brochure-photo-accent"
+             src="images/products/circle-garden-complete.webp"
+             alt="Open jars of Cayamae's Circle Garden Complete herbal balm"
+             width="900"
+             height="506"
+             loading="lazy"
+             decoding="async" />
+        <span class="brochure-photo-caption">Gathered · Infused · Poured · Labelled by Hand</span>
+      </div>
 
       <div class="philosophy-quote-block">
         <p>"{{ content.philosophy.quote_text }}"</p>
@@ -488,16 +473,29 @@
   <div class="products-grid" id="productsGrid">
     {% for product in content.products['items'] %}
     <article class="product-card" data-category="{{ product.category_id }}" aria-label="{{ product.name }}">
-      <div class="product-image">
+      <div class="product-image{% if product.image_layout %} product-image--{{ product.image_layout }}{% endif %}">
         {% if product.badge %}<span class="product-badge">{{ product.badge }}</span>{% endif %}
+        {% if product.image %}
+        <img class="product-photo"
+             src="{{ product.image }}"
+             alt="{{ product.image_alt or product.name }}"
+             width="{{ product.image_width }}"
+             height="{{ product.image_height }}"
+             loading="lazy"
+             decoding="async" />
+        {% else %}
         {{ product_art(product.image_key) }}
+        {% endif %}
       </div>
       <div class="product-info">
         <p class="product-category">{{ product.category_label }}</p>
-        <h3 class="product-name">{{ product.name }}</h3>
+        <div class="product-heading-row">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <span class="product-heading-rule" aria-hidden="true"></span>
+          <span class="product-price">{{ product.price }}</span>
+        </div>
         <p class="product-desc">{{ product.description }}</p>
         <div class="product-footer">
-          <span class="product-price">{{ product.price }}</span>
           <button class="product-add" aria-label="{{ content.products.item_cta_label }} {{ product.name }}">{{ content.products.item_cta_label }}</button>
         </div>
       </div>
@@ -549,14 +547,14 @@
       <p>{{ content.spiritual.card_text }}</p>
 
       <div class="contact-methods">
-        <div class="contact-method">
+        <a class="contact-method" href="tel:{{ content.site.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}">
           {{ contact_icon('phone') }}
           <span>{{ content.site.phone }}</span>
-        </div>
-        <div class="contact-method">
+        </a>
+        <a class="contact-method" href="mailto:{{ content.site.email }}?subject={{ content.site.mailto_subject | urlencode }}">
           {{ contact_icon('email') }}
           <span>{{ content.site.email }}</span>
-        </div>
+        </a>
       </div>
 
       <a href="{{ content.spiritual.cta_href }}" class="btn-primary" style="width: 100%; text-align: center; display: block;">
@@ -637,14 +635,14 @@
 
     <div class="footer-col">
       <h4>{{ content.footer.contact_heading }}</h4>
-      <div class="footer-contact-item">
+      <a class="footer-contact-item" href="tel:{{ content.site.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}">
         {{ contact_icon('phone') }}
         <span>{{ content.site.phone }}</span>
-      </div>
-      <div class="footer-contact-item">
+      </a>
+      <a class="footer-contact-item" href="mailto:{{ content.site.email }}">
         {{ contact_icon('email') }}
         <span>{{ content.site.email }}</span>
-      </div>
+      </a>
       <div class="footer-contact-item">
         {{ contact_icon('location') }}
         <span>{{ content.site.address_line }}</span>
