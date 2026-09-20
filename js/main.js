@@ -1,5 +1,5 @@
 /* ============================================================
-   CAYAMAES ANCIENT GARDEN — Main JS
+   CAYAMAES ANCIENT GARDEN: Main JS
    ============================================================ */
 
 'use strict';

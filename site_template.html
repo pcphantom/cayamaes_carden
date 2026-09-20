@@ -324,7 +324,7 @@
 {%- endmacro %}
 
 <nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="#hero" class="nav-logo" aria-label="{{ content.site.brand_name }} — Home">
+  <a href="#hero" class="nav-logo" aria-label="{{ content.site.brand_name }}: Home">
     <span class="nav-logo-main">{{ content.site.brand_name }}</span>
     <span class="nav-logo-sub">{{ content.site.brand_tagline }}</span>
   </a>
@@ -428,7 +428,7 @@
 
       <div class="philosophy-quote-block">
         <p>"{{ content.philosophy.quote_text }}"</p>
-        <cite>— {{ content.philosophy.quote_attribution }}</cite>
+        <cite>{{ content.philosophy.quote_attribution }}</cite>
       </div>
     </div>
 

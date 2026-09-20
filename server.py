@@ -1,5 +1,5 @@
 """
-Cayamae's Ancient Garden — Web Server
+Cayamae's Ancient Garden: Web Server
 =====================================
 Serves the homepage, exposes a password-protected admin API,
 and persists all editable site copy and SEO in content.json.
@@ -352,7 +352,7 @@ if __name__ == "__main__":
     print(
         f"""
 ╔══════════════════════════════════════════════════╗
-║    Cayamae's Ancient Garden — Web Server        ║
+║    Cayamae's Ancient Garden: Web Server         ║
 ╠══════════════════════════════════════════════════╣
 ║  Site:   http://localhost:{CONFIG['PORT']}                   ║
 ║  Admin:  http://localhost:{CONFIG['PORT']}/admin.html        ║
