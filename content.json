@@ -202,7 +202,7 @@
         "image_key": "coffee_oil",
         "image_width": 506,
         "name": "Coffee Infused Oil",
-        "price": "$22"
+        "price": "$26"
       },
       {
         "badge": "",
@@ -258,7 +258,7 @@
         "image_key": "rose_oil",
         "image_width": 506,
         "name": "Rose Infused Oil",
-        "price": "$28"
+        "price": "$24"
       },
       {
         "badge": "",
@@ -300,7 +300,7 @@
         "image_key": "lemongrass_oil",
         "image_width": 506,
         "name": "Lemongrass Infused Oil",
-        "price": "$24"
+        "price": "$22"
       },
       {
         "badge": "6X",
@@ -314,7 +314,7 @@
         "image_key": "white_willow_oil",
         "image_width": 506,
         "name": "White Willow Infused Oil",
-        "price": "$26"
+        "price": "$28"
       },
       {
         "badge": "Set of 3",
@@ -509,7 +509,7 @@
     "brand_name": "Cayamae's Ancient Garden",
     "brand_tagline": "Plant Wisdom · Sacred Craft",
     "city_region": "Sacramento, California",
-    "email": "pleasuresenses@yahoo.com",
+    "email": "cayamaesancientgarden@gmail.com",
     "location_note": "Sacramento, CA · In-person & distance sessions available",
     "mailto_subject": "Spiritual Services Inquiry",
     "phone": "(916) 613-0046"
@@ -518,7 +518,7 @@
     "card_section_label": "Book a Session",
     "card_text": "All spiritual services are offered through direct conversation. Please contact Cayamae to discuss your needs, her availability, and what form of service may best serve your path.",
     "card_title": "Reach Out Directly",
-    "cta_href": "mailto:pleasuresenses@yahoo.com?subject=Spiritual%20Services%20Inquiry",
+    "cta_href": "mailto:cayamaesancientgarden@gmail.com?subject=Spiritual%20Services%20Inquiry",
     "cta_label": "Send a Message",
     "headline_emphasis": "Healing",
     "headline_prefix": "Spiritual",
